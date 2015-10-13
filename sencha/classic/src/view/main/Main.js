@@ -15,7 +15,9 @@ Ext.define('KevHender.view.main.Main', {
         'KevHender.view.Overview',
         'KevHender.view.Resume',
         'KevHender.view.Gallery',
-        'KevHender.view.Contact'
+        'KevHender.view.Contact',
+
+        'KevHender.view.Footer'
     ],
 
     controller: 'main',
@@ -33,7 +35,7 @@ Ext.define('KevHender.view.main.Main', {
             type: 'vbox'
         },
         title: {
-            text: '<h1>Kevin Henderson</h1><h2>JavaScript (ExtJS, Sencha Touch, and AngularJS) consultant</h2>',
+            text: '<h1>Kevin Henderson</h1><h2>JavaScript consultant &nbsp;&middot;&nbsp; ExtJS, Sencha Touch, AngularJS, and more</h2>',
             flex: 0
         }
     },
@@ -45,6 +47,13 @@ Ext.define('KevHender.view.main.Main', {
             overflowHandler: 'none'
         }
     },
+
+    dockedItems: [
+        {
+            xtype: 'app-footer',
+            dock: 'bottom'
+        }
+    ],
 
     responsiveConfig: {
         tall: {
@@ -61,7 +70,7 @@ Ext.define('KevHender.view.main.Main', {
         tabConfig: {
             plugins: 'responsive',
             width: 170,
-            margin: 20,
+            margin: 15,
             responsiveConfig: {
                 wide: {
                     iconAlign: 'left',

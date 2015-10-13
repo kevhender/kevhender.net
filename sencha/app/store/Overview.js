@@ -11,7 +11,7 @@ Ext.define('KevHender.store.Overview', {
 
     proxy: {
         type: 'ajax',
-        url: '../../resources/data/Overview.json',
+        url: '../resources/data/Overview.json',
         reader: {
             type: 'json'
         }

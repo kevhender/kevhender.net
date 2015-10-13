@@ -11,7 +11,7 @@ Ext.define('KevHender.store.Gallery', {
 
     proxy: {
         type: 'ajax',
-        url: '../../resources/data/Gallery.json',
+        url: '../resources/data/Gallery.json',
         reader: {
             type: 'json'
         }

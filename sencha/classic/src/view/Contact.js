@@ -7,6 +7,7 @@ Ext.define('KevHender.view.Contact', {
     ],
 
     xtype: 'app-contact',
+    overflowY: 'auto',
 
     border: 0,
     bodyBorder: 0,

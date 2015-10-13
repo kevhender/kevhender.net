@@ -57,6 +57,8 @@
     $ui-header-padding: 0,
     $ui-header-text-margin: 0,
     $ui-border-radius: 4px,
+    $ui-body-border-width: 1px,
+    $ui-body-border-color: $base-color,
     $ui-header-noborder-adjust: false
 );
 
@@ -64,18 +66,33 @@
     font-family: FontAwesome;
 }
 
-.x-panel-header {
-    h1 {
-        font-size: 48px;
-        text-align: center;
-        margin: 10px 0;
-        line-height: 32px;
+.x-panel-navigation {
+    > .x-panel-header {
+
+        border-radius: 4px;
+
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            margin: 10px 0;
+            line-height: 36px;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            margin: 0;
+            letter-spacing: -0.7px;
+        }
     }
 
-    h2 {
-        font-size: 20px;
-        text-align: center;
-        margin: 0;
-        letter-spacing: -0.7px;
+    > .x-panel-body {
+        margin: 15px 0;
+        border: 1px solid $base-color !important;
+        border-radius: 4px;
+
+        > .x-tabpanel-child {
+            padding: 15px;
+        }
     }
 }
