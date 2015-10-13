@@ -1,17 +1,18 @@
 Ext.define('KevHender.view.Contact', {
-    extend: 'Ext.form.Panel',
+    extend: 'Ext.container.Container',
     requires:[
         'Ext.form.field.Text',
         'Ext.form.field.TextArea',
-        'Ext.form.FieldContainer'
+
+        'KevHender.view.ContactVC'
     ],
 
+    controller: 'app-contact',
     xtype: 'app-contact',
     overflowY: 'auto',
 
     border: 0,
     bodyBorder: 0,
-    bodyPadding: 15,
 
     defaults: {
         xtype: 'textfield',
@@ -45,7 +46,8 @@ Ext.define('KevHender.view.Contact', {
             xtype: 'button',
             width: 200,
             scale: 'medium',
-            text: 'Send Message'
+            text: 'Send Message',
+            handler: 'onSubmit'
         }
     ]
 });
