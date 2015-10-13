@@ -9,7 +9,9 @@ Ext.define('KevHender.Application', {
     name: 'KevHender',
 
     stores: [
-        // TODO: add global / shared stores here
+        'Gallery',
+        'Overview',
+        'Resume'
     ],
     
     launch: function () {

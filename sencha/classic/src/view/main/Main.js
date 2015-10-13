@@ -1,9 +1,5 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting automatically applies the "viewport"
- * plugin causing this view to become the body element (i.e., the viewport).
- *
- * TODO - Replace this content of this view to suite the needs of your application.
+ * This class is the main view for the application.
  */
 Ext.define('KevHender.view.main.Main', {
     extend: 'Ext.tab.Panel',
@@ -15,11 +11,14 @@ Ext.define('KevHender.view.main.Main', {
 
         'KevHender.view.main.MainController',
         'KevHender.view.main.MainModel',
-        'KevHender.view.main.List'
+
+        'KevHender.view.Overview',
+        'KevHender.view.Resume',
+        'KevHender.view.Gallery',
+        'KevHender.view.Contact'
     ],
 
     controller: 'main',
-    viewModel: 'main',
 
     ui: 'navigation',
 
@@ -27,17 +26,16 @@ Ext.define('KevHender.view.main.Main', {
     titleRotation: 0,
     tabRotation: 0,
 
+    padding: '20 60',
+
     header: {
         layout: {
-            align: 'stretchmax'
+            type: 'vbox'
         },
         title: {
-            bind: {
-                text: '{name}'
-            },
+            text: '<h1>Kevin Henderson</h1><h2>JavaScript (ExtJS, Sencha Touch, and AngularJS) consultant</h2>',
             flex: 0
-        },
-        iconCls: 'fa-th-list'
+        }
     },
 
     tabBar: {
@@ -53,7 +51,8 @@ Ext.define('KevHender.view.main.Main', {
             headerPosition: 'top'
         },
         wide: {
-            headerPosition: 'left'
+            //headerPosition: 'left'
+            headerPosition: 'top'
         }
     },
 
@@ -61,44 +60,46 @@ Ext.define('KevHender.view.main.Main', {
         bodyPadding: 20,
         tabConfig: {
             plugins: 'responsive',
+            width: 170,
+            margin: 20,
             responsiveConfig: {
                 wide: {
                     iconAlign: 'left',
-                    textAlign: 'left'
+                    textAlign: 'center'
                 },
                 tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
+                    iconAlign: 'left',
+                    textAlign: 'center'
                 }
+                //tall: {
+                //    iconAlign: 'top',
+                //    textAlign: 'center',
+                //    width: 120
+                //}
             }
         }
     },
 
-    items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
+    items: [
+        {
+            xtype: 'app-overview',
+            title: 'Overview',
+            iconCls: 'fa-home'
+        },
+        {
+            xtype: 'app-resume',
+            title: 'Résumé',
+            iconCls: 'fa-file-text-o'
+        },
+        {
+            xtype: 'app-gallery',
+            title: 'Gallery',
+            iconCls: 'fa-picture-o'
+        },
+        {
+            xtype: 'app-contact',
+            title: 'Contact',
+            iconCls: 'fa-pencil-square-o'
         }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
+    ]
 });

@@ -3,23 +3,24 @@
  */
 @include extjs-tab-panel-ui(
     $ui: 'navigation',
-    $ui-tab-background-color: transparent,
-    $ui-tab-background-color-over: #505050,
-    $ui-tab-background-color-active: #303030,
+    $ui-tab-background-color: $base-color,
+    $ui-tab-background-color-over: lighten($base-highlight-color, 10%),
+    $ui-tab-background-color-active: $base-highlight-color,
     $ui-tab-background-gradient: 'none',
     $ui-tab-background-gradient-over: 'none',
-    $ui-tab-background-gradient-active: 'none',
-    $ui-tab-color: #acacac,
-    $ui-tab-color-over: #c4c4c4,
+    $ui-tab-background-gradient-active: 'linear-gradient',
+    $ui-tab-color: #fff,
+    $ui-tab-color-over: #fff,
     $ui-tab-color-active: #fff,
-    $ui-tab-glyph-color: #acacac,
-    $ui-tab-glyph-color-over: #c4c4c4,
+    $ui-tab-glyph-color: #fff,
+    $ui-tab-glyph-color-over: #fff,
     $ui-tab-glyph-color-active: #fff,
     $ui-tab-glyph-opacity: 1,
-    $ui-tab-border-radius: 0,
+    $ui-tab-background-opacity-over: 0.7,
+    $ui-tab-border-radius: 4px,
     $ui-tab-border-width: 0,
     $ui-tab-inner-border-width: 0,
-    $ui-tab-padding: 24px,
+    $ui-tab-padding: 12px 24px,
     $ui-tab-margin: 0,
     $ui-tab-font-size: 15px,
     $ui-tab-font-size-over: 15px,
@@ -31,10 +32,11 @@
     $ui-tab-icon-width: 24px,
     $ui-tab-icon-height: 24px,
     $ui-tab-icon-spacing: 5px,
-    $ui-bar-background-color: #404040,
+    $ui-bar-background-color: $base-color,
     $ui-bar-background-gradient: 'none',
     $ui-bar-padding: 0,
-    $ui-strip-height: 0
+    $ui-strip-height: 0,
+    $ui-tab-outline-width-focus: 0
 );
 
 /**
@@ -45,39 +47,35 @@
     $ui-header-color: #fff,
     $ui-header-glyph-color: #fff,
     $ui-header-glyph-opacity: 1,
-    $ui-header-font-size: 20px,
+    //$ui-header-font-size: 20px,
     $ui-header-line-height: 24px,
-    $ui-header-font-weight: bold,
-    $ui-header-icon-height: 24px,
-    $ui-header-icon-width: 24px,
-    $ui-header-icon-spacing: 15px,
+    //$ui-header-font-weight: bold,
+    //$ui-header-icon-height: 24px,
+    $ui-header-icon-width: 0,
+    $ui-header-icon-spacing: 0,
     $ui-header-background-color: $base-color,
     $ui-header-padding: 0,
-    $ui-header-text-margin: 36px,
+    $ui-header-text-margin: 0,
+    $ui-border-radius: 4px,
     $ui-header-noborder-adjust: false
 );
 
-.x-title-icon-navigation {
-    font-family: FontAwesome;
-    color: #fff;
-    font-size: 24px;
-    line-height: 24px;
-}
-
 .x-tab-icon-el-navigation {
     font-family: FontAwesome;
-    color: #acacac;
-
-    .x-tab-over & {
-        color: #c4c4c4;
-    }
-
-    .x-tab-active & {
-        color: #fff;
-    }
 }
 
-.x-panel-header-title-navigation > .x-title-text-navigation:after {
-    top: 30px;
-    right: -24px;
+.x-panel-header {
+    h1 {
+        font-size: 48px;
+        text-align: center;
+        margin: 10px 0;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        letter-spacing: -0.7px;
+    }
 }
