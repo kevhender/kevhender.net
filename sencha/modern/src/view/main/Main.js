@@ -1,61 +1,60 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
- *
- * TODO - Replace this content of this view to suite the needs of your application.
+ * This class is the main view for the application for Modern toolkit.
  */
 Ext.define('KevHender.view.main.Main', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.Container',
     xtype: 'app-main',
 
+    layout: 'vbox',
+
     requires: [
-        'Ext.MessageBox',
-
-        'KevHender.view.main.MainController',
-        'KevHender.view.main.MainModel',
-        'KevHender.view.main.List'
+        'KevHender.view.Overview',
+        'KevHender.view.Resume',
+        'KevHender.view.Gallery',
+        'KevHender.view.Contact'
     ],
-
-    controller: 'main',
-    viewModel: 'main',
-
-    defaults: {
-        tab: {
-            iconAlign: 'top'
-        },
-        styleHtmlContent: true
-    },
-
-    tabBarPosition: 'bottom',
 
     items: [
         {
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'mainlist'
-            }]
-        },{
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Groups',
-            iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            xtype: 'titlebar',
+            dock: 'top',
+            title: 'Kevin Henderson'
+        },
+        {
+            xtype: 'tabpanel',
+            flex: 1,
+
+            defaults: {
+                tab: {
+                    iconAlign: 'top'
+                },
+                styleHtmlContent: true
+            },
+
+            tabBarPosition: 'bottom',
+
+            items: [
+                {
+                    xtype: 'overview',
+                    title: 'Overview',
+                    iconCls: 'x-fa fa-home'
+                },
+                {
+                    xtype: 'resume',
+                    title: 'Résumé',
+                    iconCls: 'x-fa fa-file-text-o'
+                },
+                {
+                    xtype: 'gallery',
+                    title: 'Gallery',
+                    iconCls: 'x-fa fa-picture-o'
+                },
+                {
+                    xtype: 'contact',
+                    title: 'Contact',
+                    iconCls: 'x-fa fa-pencil-square-o'
+                }
+            ]
         }
     ]
 });
