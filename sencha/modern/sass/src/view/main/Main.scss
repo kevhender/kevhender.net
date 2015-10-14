@@ -1,0 +1,28 @@
+
+@include tabbar-ui(
+  $ui: 'navigation',
+  $background-color: $base-highlight-color
+);
+
+@include tab-ui(
+  $ui: 'navigation',
+  $background-color: $base-highlight-color,
+  $padding-big: 0.1em 0.5em
+);
+
+@include toolbar-ui(
+  $ui: 'header',
+  $background-color: $base-color,
+  $title-font-size: 1.7rem,
+  $title-font-weight: bold
+);
+
+@include toolbar-ui(
+  $ui: 'footer',
+  $background-color: $base-color,
+  $title-font-size: 0.9rem
+);
+
+a {
+  color: white;
+}

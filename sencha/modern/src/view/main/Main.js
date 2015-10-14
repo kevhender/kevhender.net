@@ -11,14 +11,17 @@ Ext.define('KevHender.view.main.Main', {
         'KevHender.view.Overview',
         'KevHender.view.Resume',
         'KevHender.view.Gallery',
-        'KevHender.view.Contact'
+        'KevHender.view.Contact',
+
+        'KevHender.view.Footer'
     ],
 
     items: [
         {
             xtype: 'titlebar',
             dock: 'top',
-            title: 'Kevin Henderson'
+            title: 'Kevin Henderson',
+            ui: 'header'
         },
         {
             xtype: 'tabpanel',
@@ -26,12 +29,14 @@ Ext.define('KevHender.view.main.Main', {
 
             defaults: {
                 tab: {
-                    iconAlign: 'top'
+                    iconAlign: 'top',
+                    ui: 'navigation'
                 },
                 styleHtmlContent: true
             },
 
-            tabBarPosition: 'bottom',
+            tabBarPosition: 'top',
+            ui: 'navigation',
 
             items: [
                 {
@@ -55,6 +60,10 @@ Ext.define('KevHender.view.main.Main', {
                     iconCls: 'x-fa fa-pencil-square-o'
                 }
             ]
+        },
+        {
+            xtype: 'footer',
+            dock: 'bottom'
         }
     ]
 });

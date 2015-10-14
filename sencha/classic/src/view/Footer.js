@@ -10,12 +10,11 @@ Ext.define('KevHender.view.Footer', {
     items: [
         {
             xtype: 'tbtext',
-            text: '<a style="color: white" href="index.html?modern">Mobile site</a>'
+            text: '<a href="index.html?toolkit=modern">Mobile site</a>'
         },
         '->',
         {
             xtype: 'tbtext',
-            style: 'color: white',
             text: '&copy; ' + (1900 + new Date().getYear()) + ' Kevin Henderson'
         }
     ]
