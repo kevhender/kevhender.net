@@ -30,6 +30,12 @@ Ext.define('KevHender.view.Overview', {
                         '<li>{.}</li>',
                     '</tpl>',
                 '</ul>',
+                '<h3 style="text-align: left">Also find me on:</h3>',
+                '<ul>',
+                    '<tpl for="otherProfiles">',
+                        '<li><b>{site}:</b> <a href="{url}" target="_blank">{url}</a></li>',
+                    '</tpl>',
+                '</ul>',
                 '<p>{summary}</p>',
             '</tpl>'
         )

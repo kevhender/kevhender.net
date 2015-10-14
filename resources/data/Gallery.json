@@ -7,7 +7,7 @@
             "Uses MVC Architecture for both sites",
             "VT-colored theme created for both sites"
         ],
-        "summary": "Contact me to learn more, or if you wish to see the unobfuscated code",
+        "summary": "Contact me to learn more, or check out the project on <a href=\"https://github.com/kevhender/kevhender.net\" target=\"_blank\">GitHub</a>",
         "image": "kevhender"
     },
     {
@@ -19,7 +19,7 @@
             "Styled using a custom SASS theme designed by UX designed and implemented by me",
             "Uses HighCharts for charting a graphs, and YFiles for network topology mapping"
         ],
-        "summary": "Learn more at <a href=\"http://www.virtualinstruments.com/virtual-wisdom/#vw4\">http://www.virtualinstruments.com/virtual-wisdom/#vw4</a>.",
+        "summary": "Learn more at <a href=\"http://www.virtualinstruments.com/virtual-wisdom/#vw4\" target=\"_blank\">http://www.virtualinstruments.com/virtual-wisdom/#vw4</a>.",
         "image": "vw"
     },
     {
