@@ -35,7 +35,8 @@ Ext.define('KevHender.view.Contact', {
                 ui: 'kevhender',
                 width: 200,
                 scale: 'medium',
-                text: 'Send Message'
+                text: 'Send Message',
+                margin: '10 0 0 0'
             }
         ]
     }

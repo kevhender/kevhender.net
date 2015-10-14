@@ -32,7 +32,8 @@ Ext.define('KevHender.view.main.Main', {
                     iconAlign: 'top',
                     ui: 'navigation'
                 },
-                styleHtmlContent: true
+                styleHtmlContent: true,
+                padding: 20
             },
 
             tabBarPosition: 'top',

@@ -23,6 +23,34 @@
   $title-font-size: 0.9rem
 );
 
-a {
-  color: white;
+.x-toolbar-header,
+.x-toolbar-footer {
+  letter-spacing: -0.8px;
+
+  a {
+    color: white;
+  }
+}
+
+h3 {
+  color: $base-color !important;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+
+h4 {
+  color: $base-color !important;
+  vertical-align: top;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+ul {
+  padding: 0 20px 10px 20px;
+}
+
+p {
+  word-wrap: break-word;
 }

@@ -27,6 +27,7 @@ Ext.define('KevHender.view.Gallery', {
 
         itemTpl: new Ext.XTemplate(
             '<tpl for=".">',
+                '<div style="max-width: {[Ext.getBody().getWidth() - 40]}px">',
                 '<h3>{name}</h3>',
                 '<p>{overview}</p>',
                 '<ul>',
@@ -35,8 +36,9 @@ Ext.define('KevHender.view.Gallery', {
                     '</tpl>',
                 '</ul>',
                 '<p>{summary}</p>',
-                '<img src="../resources/images/{image}.png" />',
+                '<img src="../resources/images/{image}.png" style="padding-top: 1em; max-width: {[Ext.getBody().getWidth() - 40]}px"/>',
                 '<br/><br/><br/>',
+                '</div>',
             '</tpl>'
         )
     }
