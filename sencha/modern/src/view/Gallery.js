@@ -1,3 +1,6 @@
+/**
+ * Container for the gallery page
+ */
 Ext.define('KevHender.view.Gallery', {
     extend: 'Ext.dataview.DataView',
     xtype: 'gallery',

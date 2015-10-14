@@ -1,3 +1,6 @@
+/**
+ * The Contact form, for submitting a message to me
+ */
 Ext.define('KevHender.view.Contact', {
     extend: 'Ext.container.Container',
     requires:[

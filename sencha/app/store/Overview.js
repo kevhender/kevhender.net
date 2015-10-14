@@ -1,3 +1,6 @@
+/**
+ * Store for the Overview info
+ */
 Ext.define('KevHender.store.Overview', {
     extend: 'Ext.data.Store',
 

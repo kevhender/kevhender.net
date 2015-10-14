@@ -1,3 +1,6 @@
+/**
+ * Container for the overview page
+ */
 Ext.define('KevHender.view.Overview', {
     extend: 'Ext.dataview.DataView',
     xtype: 'overview',

@@ -9,9 +9,6 @@ Ext.define('KevHender.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'KevHender.view.main.MainController',
-        'KevHender.view.main.MainModel',
-
         'KevHender.view.Overview',
         'KevHender.view.Resume',
         'KevHender.view.Gallery',
@@ -19,8 +16,6 @@ Ext.define('KevHender.view.main.Main', {
 
         'KevHender.view.Footer'
     ],
-
-    controller: 'main',
 
     ui: 'navigation',
 
@@ -80,6 +75,7 @@ Ext.define('KevHender.view.main.Main', {
                     iconAlign: 'left',
                     textAlign: 'center'
                 }
+                //TODO: Responsive config
                 //tall: {
                 //    iconAlign: 'top',
                 //    textAlign: 'center',

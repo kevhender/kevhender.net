@@ -1,3 +1,6 @@
+/**
+ * The toolbar for the page footer
+ */
 Ext.define('KevHender.view.Footer', {
     extend: 'Ext.toolbar.Toolbar',
     requires:[

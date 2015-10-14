@@ -1,7 +1,8 @@
 
 @include button-ui(
   $ui: 'kevhender',
-  $background-color: $base-highlight-color,
+  $background-color: $base-color,
+  $pressed-background-color: $base-highlight-color,
   $color: white
 );
 

@@ -1,3 +1,6 @@
+/**
+ * Store for the Resume info
+ */
 Ext.define('KevHender.store.Resume', {
     extend: 'Ext.data.Store',
 

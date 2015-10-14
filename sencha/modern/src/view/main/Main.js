@@ -36,6 +36,14 @@ Ext.define('KevHender.view.main.Main', {
                 padding: 20
             },
 
+            tabBar: {
+                layout: {
+                    type: 'hbox',
+                    align: 'center',
+                    pack: 'center'
+                }
+            },
+
             tabBarPosition: 'top',
             ui: 'navigation',
 

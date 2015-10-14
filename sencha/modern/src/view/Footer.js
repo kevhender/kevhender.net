@@ -1,3 +1,6 @@
+/**
+ * Toolbar for the page footer
+ */
 Ext.define('KevHender.view.Footer', {
     extend: 'Ext.Toolbar',
     xtype: 'footer',

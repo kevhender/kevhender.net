@@ -1,3 +1,6 @@
+/**
+ * Container for the resume page
+ */
 Ext.define('KevHender.view.Resume', {
     extend: 'Ext.container.Container',
     requires:[

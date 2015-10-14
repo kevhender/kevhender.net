@@ -1,9 +1,15 @@
+/**
+ * The Contact form, for submitting a message to me
+ */
 Ext.define('KevHender.view.Contact', {
     extend: 'Ext.form.Panel',
     xtype: 'contact',
-    requires: [
+    controller: 'app-contact',
 
+    requires: [
+        'KevHender.view.ContactVC'
     ],
+
     config: {
         title: 'Contact',
 
@@ -36,7 +42,8 @@ Ext.define('KevHender.view.Contact', {
                 width: 200,
                 scale: 'medium',
                 text: 'Send Message',
-                margin: '10 0 0 0'
+                margin: '10 0 0 0',
+                handler: 'onSubmit'
             }
         ]
     }

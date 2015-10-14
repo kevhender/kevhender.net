@@ -1,3 +1,6 @@
+/**
+ * Container for the overview page
+ */
 Ext.define('KevHender.view.Overview', {
     extend: 'Ext.container.Container',
     requires:[
@@ -33,7 +36,7 @@ Ext.define('KevHender.view.Overview', {
                             '</ul>',
                             '<p>{summary}</p>',
                         '</div>',
-                        '<div>',
+                        '<div style="flex: 450px">',
                             '<img src="../resources/images/overview.png" />',
                         '</div>',
                     '</div>',

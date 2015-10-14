@@ -1,3 +1,6 @@
+/**
+ * Store for the Gallery info
+ */
 Ext.define('KevHender.store.Gallery', {
     extend: 'Ext.data.Store',
 
