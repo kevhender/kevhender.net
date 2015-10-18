@@ -30,17 +30,17 @@ Ext.define('KevHender.view.Gallery', {
 
         itemTpl: new Ext.XTemplate(
             '<tpl for=".">',
-                '<div style="max-width: {[Ext.getBody().getWidth() - 40]}px">',
-                '<h3>{name}</h3>',
-                '<p>{overview}</p>',
-                '<ul>',
-                    '<tpl for="features">',
-                        '<li>{.}</li>',
-                    '</tpl>',
-                '</ul>',
-                '<p>{summary}</p>',
-                '<img src="../resources/images/{image}.png" style="padding-top: 1em; max-width: {[Ext.getBody().getWidth() - 40]}px"/>',
-                '<br/><br/><br/>',
+                '<div style="max-width: {[Ext.getBody().getWidth() - 40]}px; word-break: break-word;">',
+                    '<h3>{name}</h3>',
+                    '<p>{overview}</p>',
+                    '<ul>',
+                        '<tpl for="features">',
+                            '<li>{.}</li>',
+                        '</tpl>',
+                    '</ul>',
+                    '<p>{summary}</p>',
+                    '<img src="../resources/images/{image}.png" style="padding-top: 1em; max-width: {[Ext.getBody().getWidth() - 40]}px"/>',
+                    '<br/><br/><br/>',
                 '</div>',
             '</tpl>'
         )
