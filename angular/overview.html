@@ -1,0 +1,21 @@
+<div ng-show="tabs.isSet(1)" style="display: flex; flex-direction: row">
+    <div>
+        <p>{{overview.data.intro}}</p>
+        <h3 style="text-align: left">Services provided:</h3>
+        <ul>
+            <li ng-repeat="service in overview.data.services">{{service}}</li>
+        </ul>
+        <h3 style="text-align: left">Availability:</h3>
+        <ul>
+            <li ng-repeat="avail in overview.data.availability">{{avail}}</li>
+        </ul>
+        <h3 style="text-align: left">Also find me on:</h3>
+        <ul>
+            <li ng-repeat="profile in overview.data.otherProfiles"><b>{{profile.site}}:</b> <a href="{{profile.url}}" target="_blank">{{profile.url}}</a></li>
+        </ul>
+        <p>{{summary}}</p>
+    </div>
+    <div style="flex: 450px">
+        <img src="../resources/images/overview.png" />
+    </div>
+</div>

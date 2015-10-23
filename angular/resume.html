@@ -1,0 +1,48 @@
+<div ng-show="tabs.isSet(2)">
+    <h3>Overview</h3>
+    <ul>
+        <li ng-repeat="bullet in resume.data.overview">{{bullet}}</li>
+    </ul>
+    <h3>Technical Skills</h3>
+    <table>
+        <tr ng-repeat="skill in resume.data.skills">
+            <td><h4>{{skill.category}}</h4></td>
+            <td>
+                    <span ng-repeat="value in skill.values">
+                        {{value}}{{$last ? '' : ', '}}
+                    </span>
+            </td>
+        </tr>
+    </table>
+    <h3>Professional Experience</h3>
+    <table ng-repeat="job in resume.data.experience" style="width: 100%; margin-bottom: 20px">
+        <tr>
+            <td><b>{{job.company}}</b> ({{job.location}})<br/><i>{{job.position}}</i></td>
+            <td style="text-align: right">{{job.from}} - {{job.to}}<br/><i>{{job.phone}}</i></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p>{{job.overview}}</p>
+                <ul>
+                    <li ng-repeat="detail in job.details">{{detail}}</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h3>Education</h3>
+    <table ng-repeat="school in resume.data.education" style="width: 100%; margin-bottom: 20px">
+        <tr>
+            <td><b>{{school.school}}</b><br/><i>{{school.location}}</i></td>
+            <td style="text-align: right; vertical-align: top">{{finished}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p>{{school.diploma}}</p>
+                <ul>
+                    <li><i>Major:</i> {{school.major}}</li>
+                    <li><i>Minors:</i> <span ng-repeat="minor in school.minors">{{minor}}{{$last ? '' : ', '}}</span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>

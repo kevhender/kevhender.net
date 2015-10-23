@@ -1,0 +1,23 @@
+<table ng-show="tabs.isSet(3)" style="width: 100%">
+    <tr ng-repeat-start="project in gallery.data">
+        <td ng-show="$even" style="width: 500px">
+            <img src="../resources/images/{{project.image}}.png" />
+        </td>
+        <td style="vertical-align: top; margin: 10px 50%; padding: 0 10px">
+            <h3>{{project.name}}</h3>
+            <p>{{project.overview}}</p>
+            <ul>
+                <li ng-repeat="feature in project.features">{{feature}}</li>
+            </ul>
+            <p>{{project.summary}}</p>
+        </td>
+        <td ng-show="$odd" style="width: 500px">
+            <img src="../resources/images/{{project.image}}.png" />
+        </td>
+    </tr>
+    <tr ng-repeat-end="">
+        <td colspan="2">
+            <div ng-hide="$last" class="divider"></div>
+        </td>
+    </tr>
+</table>
