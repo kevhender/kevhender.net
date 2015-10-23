@@ -12,7 +12,8 @@
                 $http({
                     url: '../sendMail.php',
                     method: 'POST',
-                    params: contact
+                    data: $.param(contact),
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).then(
                     function(resp) {
                         $scope.contact = {};
@@ -20,7 +21,7 @@
                     },
                     function(resp) {
                         $scope.contact = {};
-                        $window.alert('Thank you for your submission, I will get back to you as soon as I can!.');
+                        $window.alert('Sorry, there was an error submitting your message.  Please try again later.');
                     }
                 );
             }
