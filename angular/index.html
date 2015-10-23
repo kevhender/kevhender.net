@@ -1,39 +1,53 @@
 <!doctype html>
 <html>
 <head>
-    <script type="text/javascript" src="lib/angular.min.js"></script>
-    <script type="text/javascript" src="lib/angular-sanitize.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <script type="text/javascript" src="lib/js/angular.min.js"></script>
+    <script type="text/javascript" src="lib/js/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="js/Overview.js"></script>
     <script type="text/javascript" src="js/Resume.js"></script>
     <script type="text/javascript" src="js/Gallery.js"></script>
     <script type="text/javascript" src="js/App.js"></script>
-    <!--<link rel="stylesheet" href="todo.css" />-->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body ng-app="KevHender">
 
-    <section ng-controller="TabCtrl as tabs">
-        <ul class="nav nav-pills">
-            <li ng-class="{ active:tabs.isSet(1) }">
-                <a href ng-click="tabs.setTab(1)">Overview</a>
-            </li>
-            <li ng-class="{ active:tabs.isSet(2) }">
-                <a href ng-click="tabs.setTab(2)">R&eacute;sum&eacute;</a>
-            </li>
-            <li ng-class="{ active:tabs.isSet(3) }">
-                <a href ng-click="tabs.setTab(3)">Gallery</a>
-            </li>
-            <li ng-class="{ active:tabs.isSet(4) }">
-                <a href ng-click="tabs.setTab(4)">Contact</a>
-            </li>
-        </ul>
+    <div class="container theme-showcase">
+        <section ng-controller="TabCtrl as tabs">
+            <div class="jumbotron">
+                <h1>Kevin Henderson</h1>
+                <h3>JavaScript consultant &nbsp;&middot;&nbsp; ExtJS, Sencha Touch, AngularJS, and more</h3>
 
-        <overview></overview>
+                <ul class="nav nav-pills">
+                    <li ng-class="{ active:tabs.isSet(1) }">
+                        <a href ng-click="tabs.setTab(1)"><span class="glyphicon glyphicon-home"></span> Overview</a>
+                    </li>
+                    <li ng-class="{ active:tabs.isSet(2) }">
+                        <a href ng-click="tabs.setTab(2)"><span class="glyphicon glyphicon-file"></span> R&eacute;sum&eacute;</a>
+                    </li>
+                    <li ng-class="{ active:tabs.isSet(3) }">
+                        <a href ng-click="tabs.setTab(3)"><span class="glyphicon glyphicon-picture"></span> Gallery</a>
+                    </li>
+                    <li ng-class="{ active:tabs.isSet(4) }">
+                        <a href ng-click="tabs.setTab(4)"><span class="glyphicon glyphicon-edit"></span> Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-        <resume></resume>
+            <overview></overview>
 
-        <gallery></gallery>
+            <resume></resume>
 
-    </section>
+            <gallery></gallery>
+
+        </section>
+
+        <div class="jumbotron" style="display: flex; padding: 8px">
+            <div style="flex: 1"></div>
+            <div style="flex: 1; text-align: right">&copy;2015 Kevin Henderson</div>
+        </div>
+    </div>
 
 </body>
 </html>
