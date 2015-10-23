@@ -36,7 +36,7 @@ body {
 
 .nav-pills li > a,
 .nav-pills li > a:focus {
-    padding: 15px 35px;
+    padding: 12px 35px;
     color: white;
     background-color: transparent;
     font-size: 16px;
