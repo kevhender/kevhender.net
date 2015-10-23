@@ -1,11 +1,17 @@
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    background-color: #fff9f2;
+}
+
+.theme-showcase {
+    background-color: #fff9f2;
 }
 
 .jumbotron {
     text-align: center;
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
     padding-top: 0;
     padding-bottom: 1.5em;
     background-color: #8b4b5b;
@@ -17,7 +23,7 @@ body {
     padding-top: 0.1em;
 }
 
-.jumbotron h3 {
+.jumbotron h2 {
     font-size: 1.25em;
     margin-top: 0;
 }
@@ -54,4 +60,50 @@ body {
     height: 3px;
     background-color: #8b4b5b;
     margin: 20px 0
+}
+
+.main-body {
+    border: 1px solid #8b4b5b;
+    background-color: white;
+    border-radius: 6px;
+    padding: 2em;
+}
+
+.form-control {
+    margin-bottom: 1em;
+}
+
+input[type=text].form-control {
+    max-width: 400px;
+}
+
+textarea.form-control {
+    height: 12em;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus {
+    max-width: 400px;
+    background-color: #8b4b5b;
+    color: white;
+}
+
+
+h3 {
+    color: #bd5f3c !important;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-size: 1.25em;
+}
+
+h4 {
+    color: #bd5f3c !important;
+    vertical-align: top;
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+    font-size: 1.17em;
 }

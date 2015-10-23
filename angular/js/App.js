@@ -3,7 +3,7 @@
  */
 (function() {
 
-    var app = angular.module('KevHender', ['overview', 'resume', 'gallery']);
+    var app = angular.module('KevHender', ['overview', 'resume', 'gallery', 'contact']);
 
     app.controller('TabCtrl', function() {
 

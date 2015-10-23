@@ -7,7 +7,9 @@
     <script type="text/javascript" src="js/Overview.js"></script>
     <script type="text/javascript" src="js/Resume.js"></script>
     <script type="text/javascript" src="js/Gallery.js"></script>
+    <script type="text/javascript" src="js/Contact.js"></script>
     <script type="text/javascript" src="js/App.js"></script>
+
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -17,7 +19,7 @@
         <section ng-controller="TabCtrl as tabs">
             <div class="jumbotron">
                 <h1>Kevin Henderson</h1>
-                <h3>JavaScript consultant &nbsp;&middot;&nbsp; ExtJS, Sencha Touch, AngularJS, and more</h3>
+                <h2>JavaScript consultant &nbsp;&middot;&nbsp; ExtJS, Sencha Touch, AngularJS, and more</h2>
 
                 <ul class="nav nav-pills">
                     <li ng-class="{ active:tabs.isSet(1) }">
@@ -35,15 +37,16 @@
                 </ul>
             </div>
 
-            <overview></overview>
-
-            <resume></resume>
-
-            <gallery></gallery>
+            <div class="main-body">
+                <overview></overview>
+                <resume></resume>
+                <gallery></gallery>
+                <contact></contact>
+            </div>
 
         </section>
 
-        <div class="jumbotron" style="display: flex; padding: 8px">
+        <div class="jumbotron" style="display: flex; padding: 8px; margin-top: 1em">
             <div style="flex: 1"></div>
             <div style="flex: 1; text-align: right">&copy;2015 Kevin Henderson</div>
         </div>

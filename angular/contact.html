@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<form ng-submit="submitForm(contact)" ng-show="tabs.isSet(4)">
+    <div class="form-group">
 
-</body>
-</html>
+        <label for="fromName">Your Name</label>
+        <input type="text" ng-model="contact.fromName" id="fromName" class="form-control" placeholder="Your Name">
+
+        <label for="fromEmail">Your Email</label>
+        <input type="text" ng-model="contact.fromEmail" id="fromEmail" class="form-control" placeholder="Your Email">
+
+        <label for="subject">Subject</label>
+        <input type="text" ng-model="contact.subject" id="subject" class="form-control" placeholder="Subject">
+
+        <label for="message">Message</label>
+        <textarea ng-model="contact.message" id="message" class="form-control" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn btn-default">Send Message</button>
+
+    </div>
+</form>
