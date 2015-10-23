@@ -3,7 +3,7 @@
  */
 (function() {
 
-    angular.module('overview', [])
+    angular.module('overview', ['ngSanitize'])
 
         .controller('OverviewCtrl', ['$http', function($http) {
 

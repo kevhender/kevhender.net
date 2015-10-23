@@ -3,7 +3,7 @@
  */
 (function() {
 
-    angular.module('gallery', [])
+    angular.module('gallery', ['ngSanitize'])
 
         .controller('GalleryCtrl', ['$http', function($http) {
 

@@ -9,7 +9,7 @@
             <ul>
                 <li ng-repeat="feature in project.features">{{feature}}</li>
             </ul>
-            <p>{{project.summary}}</p>
+            <p ng-bind-html="project.summary"></p>
         </td>
         <td ng-show="$odd" style="width: 500px">
             <img src="../resources/images/{{project.image}}.png" />

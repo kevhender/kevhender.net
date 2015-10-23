@@ -3,7 +3,7 @@
         <p>{{overview.data.intro}}</p>
         <h3 style="text-align: left">Services provided:</h3>
         <ul>
-            <li ng-repeat="service in overview.data.services">{{service}}</li>
+            <li ng-repeat="service in overview.data.services" ng-bind-html="service"></li>
         </ul>
         <h3 style="text-align: left">Availability:</h3>
         <ul>
