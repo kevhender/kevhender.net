@@ -2,7 +2,8 @@
 div.jumbotron.kh-footer {
     display: flex;
     padding: 8px;
-    margin-top: 1em
+    margin-top: 1em;
+    font-size: 13px;
 }
 
 div.kh-footer div {

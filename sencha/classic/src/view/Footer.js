@@ -18,6 +18,7 @@ Ext.define('KevHender.view.Footer', {
         '->',
         {
             xtype: 'tbtext',
+            style: 'color: white',
             text: '&copy; ' + (1900 + new Date().getYear()) + ' Kevin Henderson'
         }
     ]

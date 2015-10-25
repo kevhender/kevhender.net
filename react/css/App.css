@@ -5,11 +5,40 @@
 @font-face {
     font-family: 'Open Sans';
     src: url('../../lib/fonts/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
 }
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background-color: #fff9f2;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 15px;
 }
 
 .theme-showcase {

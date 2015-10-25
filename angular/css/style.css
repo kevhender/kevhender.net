@@ -2,11 +2,40 @@
 @font-face {
     font-family: 'Open Sans';
     src: url('../../lib/fonts/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../lib/fonts/OpenSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
 }
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background-color: #fff9f2;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 15px;
 }
 
 .theme-showcase {
@@ -45,7 +74,6 @@ body {
     color: white;
     background-color: transparent;
     font-size: 16px;
-    font-weight: bold;
     margin: 0 20px;
 }
 
@@ -111,4 +139,15 @@ h4 {
     text-transform: uppercase;
     padding-bottom: 0.5em;
     font-size: 1.17em;
+}
+
+.jumbotron.footer {
+    font-size: 13px;
+    display: flex;
+    padding: 8px;
+    margin-top: 1em
+}
+
+.footer div {
+    flex: 1;
 }
