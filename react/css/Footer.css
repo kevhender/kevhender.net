@@ -1,0 +1,10 @@
+
+div.jumbotron.kh-footer {
+    display: flex;
+    padding: 8px;
+    margin-top: 1em
+}
+
+div.kh-footer div {
+    flex: 1;
+}
