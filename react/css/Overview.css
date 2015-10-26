@@ -1,0 +1,13 @@
+
+.kh-overview {
+    display: flex;
+    flex-direction: row;
+}
+
+.kh-overview-header {
+    text-align: left;
+}
+
+.kh-overview-image {
+    flex: 450px;
+}

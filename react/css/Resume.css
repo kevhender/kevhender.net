@@ -1,0 +1,14 @@
+
+.kh-resume-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.kh-resume-job-info {
+    text-align: right;
+}
+
+.kh-resume-school-date {
+    text-align: right;
+    vertical-align: top;
+}

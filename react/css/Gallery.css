@@ -1,0 +1,25 @@
+
+.kh-gallery-image {
+    max-width: 500px;
+}
+
+.kh-project {
+    display: table;
+    width: 100%;
+}
+
+.kh-project > div {
+    display: table-cell;
+}
+
+.kh-gallery-description {
+    vertical-align: top;
+    margin: 10px 50%;
+    padding: 0 10px
+}
+
+.kh-tr-divider {
+    border-bottom: 3px solid #8b4b5b;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}

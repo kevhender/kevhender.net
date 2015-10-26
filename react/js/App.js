@@ -1,6 +1,9 @@
 /**
  * Main file for overall app
  */
+
+KH.Dispatcher = new Flux.Dispatcher();
+
 var App = React.createClass({
 
     getInitialState: function () {
@@ -24,10 +27,12 @@ var App = React.createClass({
 
                 </div>
 
-                { this.state.currentTab === 'overview' ? <KH.Overview /> : null}
-                { this.state.currentTab === 'resume' ? <KH.Resume /> : null}
-                { this.state.currentTab === 'gallery' ? <KH.Gallery /> : null}
-                { this.state.currentTab === 'contact' ? <KH.Contact /> : null}
+                <div className="kh-main-body">
+                    { this.state.currentTab === 'overview' ? <KH.Overview /> : null}
+                    { this.state.currentTab === 'resume' ? <KH.Resume /> : null}
+                    { this.state.currentTab === 'gallery' ? <KH.Gallery /> : null}
+                    { this.state.currentTab === 'contact' ? <KH.Contact /> : null}
+                </div>
 
                 <KH.Footer />
             </div>
