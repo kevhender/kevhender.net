@@ -11,12 +11,10 @@
         {
             "category": "Languages",
             "values": [
-                "Javascript",
-                "ExtJS",
-                "AngularJS",
-                "CSS/SASS/Fashion",
+                "JavaScript",
                 "Java",
-                "JSP"
+                "HTML5",
+                "CSS/SASS/LESS"
             ]
         },
         {
@@ -24,11 +22,17 @@
             "values": [
                 "ExtJS",
                 "Sencha Touch",
+                "AngularJS",
+                "ReactJS",
+                "jQuery",
+                "Dojo Toolkit",
+                "Node.js",
+                "Apache Cordova (PhoneGap)",
                 "Spring Framework",
                 "Spring Security",
                 "Hibernate",
-                "Apache Cordova (PhoneGap)",
-                "Guava (Google Collections)",
+                "Guava",
+                "Siesta",
                 "Log4J",
                 "Ant",
                 "Maven",
@@ -45,38 +49,19 @@
                 "Eclipse",
                 "Firebug & Webkit debugging",
                 "GIMP Image Editor",
-                "JBoss Application Server",
                 "Tomcat"
             ]
         },
         {
             "category": "Other",
             "values": [
-                "SVN",
-                "JIRA",
+                "Git",
+                "Jira",
+                "Subversion",
+                "Maven",
+                "Ant",
                 "JavaMelody",
-                "Web Services",
                 "Agile Software Development Process"
-            ]
-        },
-        {
-            "category": "Also Familiar With",
-            "values": [
-                "JSP",
-                "JSF",
-                "RichFaces",
-                "XSLT",
-                "C#",
-                "C++",
-                "Perl",
-                "ASP.NET",
-                "PHP",
-                "Shell Scripting",
-                "JBoss SEAM",
-                "Struts",
-                "DynamicReports Library",
-                "Visual Studio .NET",
-                "Weblogic"
             ]
         }
     ],

@@ -2,10 +2,10 @@
     {
         "name": "kevhender.net (This site)",
         "features": [
-            "Written as a universal app using ExtJS 6.0.1",
-            "Detects desktop/mobile users and redirects to best site",
-            "Uses MVC Architecture for both sites",
-            "VT-colored theme created for both sites"
+            "Several versions written with different frameworks/libraries (ExtJS, Angular, React, jQuery), to showcase different abilities",
+            "Sencha version written as universal app with ExtJS 6.0.1. Detects desktop/mobile users and redirects to best site",
+            "Angular version written with AngularJS, Twitter Bootstrap CSS, and jQuery",
+            "React version written with ReactJS, Twitter Bootstrap CSS, and jQuery"
         ],
         "summary": "Contact me to learn more, or check out the project on <a href=\"https://github.com/kevhender/kevhender.net\" target=\"_blank\">GitHub</a>",
         "image": "kevhender"
