@@ -4,6 +4,7 @@
 @import url(Overview.css);
 @import url(Resume.css);
 @import url(Gallery.css);
+@import url(Contact.css);
 
 @font-face {
     font-family: 'Open Sans';
@@ -86,16 +87,6 @@ input[type=text].form-control {
 textarea.form-control {
     height: 12em;
 }
-
-.btn-default,
-.btn-default:hover,
-.btn-default:active,
-.btn-default:focus {
-    max-width: 400px;
-    background-color: #8b4b5b;
-    color: white;
-}
-
 
 h3 {
     color: #bd5f3c !important;

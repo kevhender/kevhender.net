@@ -9,18 +9,18 @@
 
             $scope.submitForm = function(contact) {
 
+                document.getElementById('sendMessageButton').disabled = true
+
                 $http({
                     url: '../sendMail.php',
                     method: 'POST',
                     data: $.param(contact),
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).then(
-                    function(resp) {
-                        $scope.contact = {};
+                    function() {
                         $window.alert('Thank you for your submission, I will get back to you as soon as I can!.');
                     },
-                    function(resp) {
-                        $scope.contact = {};
+                    function() {
                         $window.alert('Sorry, there was an error submitting your message.  Please try again later.');
                     }
                 );

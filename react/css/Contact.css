@@ -1,0 +1,13 @@
+
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-default[disabled],
+.btn-default[disabled]:hover,
+.btn-default[disabled]:active,
+.btn-default[disabled]:focus {
+    max-width: 400px;
+    background-color: #8b4b5b;
+    color: white;
+}

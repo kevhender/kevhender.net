@@ -28,7 +28,7 @@ KH.ResumeSkills = React.createClass({
                                     {skill.values.map(function(value, index) {
                                         return (
                                             <span key={index}>
-                                                {value}{index === (skill.values.length - 1) ? '' : ', '}
+                                                {value + (index === (skill.values.length - 1) ? '' : ', ')}
                                             </span>
                                         );
                                     }.bind(this))}
@@ -44,7 +44,6 @@ KH.ResumeSkills = React.createClass({
 
 KH.ResumeExperience = React.createClass({
     render: function() {
-        console.log(this.props.experience)
         return (
             <div>
                 {this.props.experience.map(function(job, index) {
@@ -97,7 +96,7 @@ KH.ResumeEducation = React.createClass({
                                                 <i>Minors: </i>
                                                 {school.minors.map(function(minor, index) {
                                                     return (
-                                                        <span key={index}>{minor}{index === (school.minors.length - 1) ? '' : ', '}</span>
+                                                        <span key={index}>{minor + (index === (school.minors.length - 1) ? '' : ', ')}</span>
                                                     );
                                                 }.bind(this))}
                                             </li>
