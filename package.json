@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "webpack",
     "build": "webpack -p",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "eslint *.js src"
   },
   "keywords": [
     "kevhender"
@@ -29,5 +30,13 @@
     "webpack": "^3.9.1",
     "webpack-dev-middleware": "^1.12.2",
     "webpack-hot-middleware": "^2.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
   }
 }

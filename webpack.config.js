@@ -5,7 +5,7 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    `react-hot-loader/patch`,
+    'react-hot-loader/patch',
     './main.js',
   ],
   output: {
@@ -21,6 +21,11 @@ module.exports = {
         query: {
           presets: ['react'],
         },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
       },
     ],
   },
