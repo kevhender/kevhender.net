@@ -2,8 +2,6 @@
  * Main file for overall app
  */
 
-KH.Dispatcher = new Flux.Dispatcher();
-
 var App = React.createClass({
 
     getInitialState: function () {

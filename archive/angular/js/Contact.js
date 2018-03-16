@@ -9,7 +9,7 @@
 
             $scope.submitForm = function(contact) {
 
-                document.getElementById('sendMessageButton').disabled = true
+                document.getElementById('sendMessageButton').disabled = true;
 
                 $http({
                     url: '../sendMail.php',
