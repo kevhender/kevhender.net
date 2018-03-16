@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.idea/workspace.xml
+archive/sencha/build/
+archive/sencha/modern/sass/var/
+archive/sencha/overrides/
+archive/sencha/packages/
+archive/sencha/resources/
+archive/sencha/sass/src/
+node_modules/
