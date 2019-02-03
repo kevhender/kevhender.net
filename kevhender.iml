@@ -3,6 +3,9 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/archive/angular/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/archive/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/archive/react/lib" />
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/.sencha" />
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/build" />
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/resources" />

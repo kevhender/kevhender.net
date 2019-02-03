@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   context: path.join(__dirname, 'src'),
+  mode: 'development',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     'react-hot-loader/patch',
@@ -19,7 +20,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react'],
+          presets: ['@babel/react'],
         },
       },
       {
