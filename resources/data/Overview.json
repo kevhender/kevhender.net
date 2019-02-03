@@ -1,0 +1,30 @@
+[{
+  "intro": "I provide expert web and mobile application solutions using a variety of JavaScript technologies, including ExtJS, AngularJS, and ReactJS.  Having worked on web applications for the past 15+ years, I can offer fast, high-quality consulting expertise for new and existing web and mobile applications.",
+  "services": [
+    "New code generation",
+    "Legacy code cleanup",
+    "Troubleshooting &amp; bug fixes",
+    "Remote server integration",
+    "Version upgrading",
+    "Theming"
+  ],
+  "availability": [
+    "Full-time or part-time",
+    "Remote or local to Charlotte, NC"
+  ],
+  "otherProfiles": [
+    {
+      "site": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kevhender"
+    },
+    {
+      "site": "StackOverflow",
+      "url": "http://stackoverflow.com/users/2072693/kevhender"
+    },
+    {
+      "site": "GitHub",
+      "url": "https://github.com/kevhender"
+    }
+  ],
+  "summary": "Please browse this site to learn more, and feel free to contact me using the navigation above for more info."
+}]
