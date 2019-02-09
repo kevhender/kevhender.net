@@ -19,15 +19,20 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['@babel/react'],
+          plugins: [
+            '@babel/plugin-transform-async-to-generator',
+            ['@babel/plugin-proposal-decorators', { legacy: true }],
+            '@babel/plugin-proposal-class-properties',
+          ],
         },
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'eslint-loader',
+      // },
     ],
   },
   plugins: [
