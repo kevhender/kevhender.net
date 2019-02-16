@@ -13,19 +13,35 @@ import withStyles from '@material-ui/core/styles/withStyles';
 /**
  * A piece of the timeline chronology, marking how much time has passed for an event
  */
-@withStyles((theme => ({
+@withStyles(theme => ({
   root: {
     width: `${theme.timeline.chronoWidth}px`,
+    padding: '0 .5rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'stretch',
+    order: 2,
+    [theme.breakpoints.down('sm')]: {
+      width: `${theme.timeline.chronoWidth / 3}px`,
+    },
   },
   label: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     padding: '.4rem .7rem',
     borderRadius: '8px',
+    [theme.breakpoints.down('sm')]: {
+      transform: 'rotate(270deg)',
+    },
+  },
+  presentYearLabel: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '20px',
+    },
+    '& + $monthSpacer': {
+      flex: '1 0 40px',
+    },
   },
   spacer: {
     width: `${theme.timeline.chronoLineWidth}px`,
@@ -53,7 +69,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   selectedYearBreak: {
     borderColor: theme.palette.secondary.main,
   },
-})))
+}))
 @inject('timeline')
 @observer
 class TimelineChrono extends Component {
@@ -77,7 +93,10 @@ class TimelineChrono extends Component {
         key={`label-${year}`}
         className={classnames(
           classes.label,
-          { [classes.selectedSpacer]: isDateInSelectedRange(timeline, new Date(`${isLast ? '12/31' : '01/01'}/${year === 'Present' ? now.getFullYear() : year}`)) },
+          {
+            [classes.selectedSpacer]: isDateInSelectedRange(timeline, new Date(`${isLast ? '12/31' : '01/01'}/${year === 'Present' ? now.getFullYear() : year}`)),
+            [classes.presentYearLabel]: year === 'Present',
+          },
         )}
         variant="body1"
       >

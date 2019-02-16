@@ -1,0 +1,175 @@
+[
+  {
+    "name": "Moovweb",
+    "type": "employment",
+    "dates": {
+      "from": "11/2015"
+    },
+    "location": "San Francisco, CA (telecommuting from Charlotte, NC)",
+    "logo": "moovweb.svg",
+    "phone": "",
+    "position": "Senior Platform Engineer",
+    "overview": "Platform developer for Moovweb's React Storefront PWA framework. Formerly lead developer on MoovCheckout, a React-based application that builds an injectable snippet to transform a mobile checkout flow, in order to achieve maximize conversion rate.",
+    "details": [
+      "Worked on both core framework functionality and individual customer site implementations.",
+      "Assisted in initial application bootstrapping, helping to set up independent Node package structure for intuitive application build and deployment.",
+      "Helped build and maintain dev server environment using man-in-the-middle proxy on an Express server, to allow application to be injected onto a production environment for full usability during the development cycle."
+    ]
+  },
+  {
+    "name": "Virtual Instruments",
+    "type": "employment",
+    "dates": {
+      "from": "12/2013",
+      "to": "10/2015"
+    },
+    "location": "San Jose, CA (telecommuting from Charlotte, NC)",
+    "logo": "vi.svg",
+    "phone": "",
+    "position": "Senior Software Engineer",
+    "overview": "Senior UI developer that worked on an ExtJS 6 application called VirtualWisdom (VW).",
+    "details": [
+      "Rapidly integrated into UI team as a power ExtJS user, teaching new techniques and mentoring other developers about ExtJS best-practices.",
+      "Coordinated major overhaul of existing codebase to refactor into proper Sencha-recommended MVC architecture, and for better performance, maintenance, and readability",
+      "Reorganized ordinary CSS stylesheets into a new SASS-based theme, integrating the stylesheet compilation into the app's Maven build",
+      "Architected a proof-of-concept for prototype of mobile version of app using Sencha Touch 2.3",
+      "Assisted in directing the upgrade of the product from ExtJS 4.2.1 to ExtJS 5.1.0, and assisted with later upgrades to ExtJS 6.x versions.",
+      "Implemented a complex custom routing solution with ExtJS 4.2.1, and migrated to the new built-in framework routing after upgrading to ExtJS 5+.",
+      "Bootstrapped and maintained automated testing for UI using Siesta framework"
+    ]
+  },
+  {
+    "name": "Bank of America",
+    "type": "employment",
+    "dates": {
+      "from": "3/2013",
+      "to": "12/2013"
+    },
+    "location": "Charlotte, NC",
+    "logo": "boa.png",
+    "phone": "",
+    "position": "Senior Software Contractor",
+    "overview": "Served as Subject Matter Expert (SME), providing expertise, mentoring, and development in ExtJS for an internal Risk Technologies tool.",
+    "details": [
+      "Upgraded application from ExtJS 4.0.7 to ExtJS 4.1.3.",
+      "Assisted in design and development for various ExtJS components.",
+      "Designed and developed screens for query builder and results, to allow for dynamically selecting data based on criteria, displaying the data results, and modifying/submitting/deleting the data.",
+      "Mentored on-site and offshore resources in best-practices for ExtJS."
+    ]
+  },
+  {
+    "name": "Aym Technologies",
+    "type": "employment",
+    "dates": {
+      "from": "9/2011",
+      "to": "3/2013"
+    },
+    "location": "Charlotte, NC",
+    "logo": "aym.png",
+    "phone": "(704) 343-9688",
+    "position": "Technical Lead/Architect",
+    "overview": "Architected and built a software-as-a-service (SaaS) application called OnTarget Clinical (OTC) from infancy to production. As the tech lead of a team of two, I oversaw the entire product lifecycle of the application. The system was based on an existing .NET application, but was built from scratch entirely using Spring, Hibernate, and ExtJS.",
+    "details": [
+      "Designed multi-tenancy system for OTC using Spring Security.",
+      "Used ExtDirectSpring to allow for easy connection between Spring backend and ExtJS UI.",
+      "Created a metadata-based search and sort mechanism for quick, intuitive, and reusable data access layer using custom-made annotations, ExtDirectSpring and Hibernate Criteria queries.",
+      "Designed and maintained build system for managing application versioning, including using Sencha Command to package and optimize javascript application.",
+      "Created an Ad Hoc Reporting system, using DynamicReports library with Jasper Reports to allow users to configure data sets for customized reports."
+    ]
+  },
+  {
+    "name": "Companion Cabinet Software (now Breakfront)",
+    "type": "employment",
+    "dates": {
+      "from": "11/2008",
+      "to": "9/2011"
+    },
+    "location": "Charlotte, NC",
+    "logo": "ccs.png",
+    "phone": "",
+    "position": "Senior Software Developer",
+    "overview": "Worked on teams with 1-5 engineers on cloud-based software service for Cabinet Dealers designed to streamline the entire sales process, from CRM capabilities, to quoting, pricing, purchasing, and receiving.",
+    "details": [
+      "Quickly integrated into a team of 5 developers, becoming a valuable resource for Java, Javascript, and CSS knowledge.",
+      "Developed app using JBoss SEAM back-end, with Hibernate as the persistence framework.",
+      "Took the lead on several release efforts, organizing project tasks and release timetables, and serving as lead developer.",
+      "Converted a slower, JSF-based front-end to a faster, more dynamic interface using ExtJS. The application was loaded using a single HTML page, and the DOM was then built using an object-oriented UI built on extended ExtJS components.",
+      "Created many plugins for ExtJS to allow for custom Javascript components that could be reused throughout the application.",
+      "Worked on team of 2 with manager to create a separate webapp for catalog management, also using SEAM platform with a dynamic ExtJS interface.",
+      "Used Ant to design build process that combined Javascript and CSS files into single, compressed, minified file, allowing for development of separate, modularized .js files.",
+      "Created new custom JSF tags, and simplified existing code into reusable custom tags."
+    ]
+  },
+  {
+    "name": "ACN, Inc.",
+    "type": "employment",
+    "dates": {
+      "from": "8/2008",
+      "to": "11/2008"
+    },
+    "location": "Concord, NC",
+    "phone": "(704) 260-3226",
+    "logo": "acn.png",
+    "position": "Senior Software Developer",
+    "overview": "Worked on internal application that managed sales representatives and assisted with help desk inquiries.",
+    "details": [
+      "Developed for JBoss Application Server with a Struts-based front-end.",
+      "Quickly learned and began developing Oracle PL-SQL scripts to improve backend performance"
+    ]
+  },
+  {
+    "name": "Solers, Inc.",
+    "type": "employment",
+    "dates": {
+      "from": "1/2005",
+      "to": "8/2008"
+    },
+    "location": "Arlington, VA",
+    "phone": "(703) 526-0001",
+    "logo": "solers.png",
+    "position": "Software Engineer",
+    "overview": "Developer in Enterprise Services (ES) department of Net-Centric Systems Division (NCSD); selected by management to be trained as an Integrated Project Team (IPT) Lead",
+    "details": [
+      "Led development effort for Battle Command Battle Lab (BCBL) Information Exchange Manager (IEM), using Java to extract information from an LDAP server to configure a Net-Centric Enterprise Services (NCES) compliant messaging channel.",
+      "Redesigned and implemented NCES Federated Search portlet using AJAX technology to obtain dynamic, asynchronous search results.",
+      "Redesigned and implemented NCES Messaging portlet to migrate from a traditional JSP portlet into a dynamic, AJAX-based messaging inbox.",
+      "Assisted in creating web service clients for NCES web services with Apache Axis and mock clients used for internal testing.",
+      "Created an extension to Apache Lucene to index and search directories using a database schema rather than the Lucene default file-based indexing."
+    ]
+  },
+  {
+    "name": "General Electric (GE Energy)",
+    "type": "employment",
+    "dates": {
+      "from": "5/2004",
+      "to": "8/2004"
+    },
+    "location": "Salem, VA",
+    "phone": "(540) 387-7000",
+    "logo": "ge.png",
+    "position": "Software Engineering Intern",
+    "overview": "Worked on Windows application to fully support a turbine engine. Developed code using C# and ASP .NET."
+  },
+  {
+    "name": "Virginia Tech",
+    "type": "school",
+    "location": "Blacksburg, VA",
+    "logo": "vt.png",
+    "dates": {
+      "from": "8/2000",
+      "to": "12/2004"
+    },
+    "diploma": "B.S.",
+    "honors": [
+      "Magna Cum Laude",
+      "Honors Scholar Diploma"
+    ],
+    "majors": [
+      "Computer Engineering"
+    ],
+    "minors": [
+      "Spanish",
+      "Business Leadership"
+    ]
+  }
+]

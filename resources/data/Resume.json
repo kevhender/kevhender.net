@@ -35,8 +35,9 @@
             "Promises + async/await",
             "ESLint",
             "MaterialUI",
+            "JSS",
             "PreCss/PostCss",
-            "Mocha/Chai",
+            "Mocha/Chai/Enzyme",
             "Webpack"
           ],
           "past": [

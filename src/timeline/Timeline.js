@@ -3,23 +3,45 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TimelineChrono from './TimelineChrono';
 import TimelineEvent from './TimelineEvent';
+import classnames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 /**
  * Displays a Timeline
  */
-@withStyles((theme => ({
-  root: {
+@withStyles(theme => ({
+  eventRow: {
     display: 'flex',
   },
   eventColumn: {
     flex: 1,
-    marginTop: '2rem',
+    display: 'flex',
+    justifyContent: 'flex-end',
   },
-  eventRowObject: {
-    flex: `1 0 calc(50% - ${theme.timeline.chronoWidth / 2}px)`,
+  eventSpacer: {
+    flex: 1,
+    [theme.breakpoints.down('sm')]: {
+      flex: 0,
+    },
   },
-})))
+  oddEventColumn: {
+    order: 1,
+    [theme.breakpoints.down('sm')]: {
+      order: 3,
+      justifyContent: 'flex-start',
+    },
+  },
+  evenEventColumn: {
+    order: 3,
+    justifyContent: 'flex-start',
+  },
+  oddSpacerColumn: {
+    order: 3,
+  },
+  evenSpacerColumn: {
+    order: 1,
+  },
+}))
 @inject('timeline')
 class Timeline extends Component {
   static propTypes = {
@@ -31,29 +53,30 @@ class Timeline extends Component {
     classes: {},
   };
 
-  renderTimelineEvent = event => {
-    const { classes } = this.props;
-    return (
-      <TimelineEvent
-        key={event.name}
-        className={classes.eventRowObject}
-        event={event}
-      />
-    );
-  };
-
   render() {
     const { classes, timeline } = this.props;
     const events = timeline.sortedEvents;
     return events.map((event, idx) => (
-      <div className={classes.root} key={event.name}>
-        <div className={classes.eventColumn}>
-          { idx % 2 ? null : this.renderTimelineEvent(event) }
+      <div className={classes.eventRow} key={event.name}>
+        <div
+          className={classnames(
+            classes.eventColumn,
+            idx % 2 ? classes.evenEventColumn : classes.oddEventColumn,
+          )}
+        >
+          <TimelineEvent event={event} isOdd={!(idx % 2)} />
         </div>
-        <TimelineChrono currentEvent={event} isFirst={idx === 0} isLast={idx === events.length - 1} />
-        <div className={classes.eventColumn}>
-          { idx % 2 ? this.renderTimelineEvent(event) : null }
-        </div>
+        <TimelineChrono
+          currentEvent={event}
+          isFirst={idx === 0}
+          isLast={idx === events.length - 1}
+        />
+        <div
+          className={classnames(
+            classes.eventSpacer,
+            idx % 2 ? classes.evenSpacerColumn : classes.oddSpacerColumn,
+          )}
+        />
       </div>
     ));
   }

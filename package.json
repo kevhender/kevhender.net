@@ -20,11 +20,13 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
     "classnames": "^2.2.6",
     "lodash": "^4.17.11",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
     "mobx-state-tree": "^3.10.2",
+    "moment": "^2.24.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
