@@ -11,11 +11,7 @@ const TimelineEventModel = types
     startDate: types.Date,
     endDate: types.maybe(types.Date),
     location: types.string,
-    position: types.maybe(types.string),
     logo: types.maybe(types.string),
-    phone: types.maybe(types.string),
-    overview: types.maybe(types.string),
-    details: types.array(types.string),
   });
 
 export default TimelineEventModel;

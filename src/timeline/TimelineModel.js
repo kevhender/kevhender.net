@@ -1,4 +1,5 @@
-import TimelineEventModel from './TimelineEventModel';
+import JobEventModel from './JobEventModel';
+import SchoolEventModel from './SchoolEventModel';
 import { types } from 'mobx-state-tree';
 
 const sortEvents = events => (events || []).sort((event1, event2) => (event2.endDate || new Date()).getTime() - (event1.endDate || new Date()).getTime());
@@ -8,8 +9,8 @@ const sortEvents = events => (events || []).sort((event1, event2) => (event2.end
  */
 const TimelineModel = types
   .model('TimelineModel', {
-    events: types.array(TimelineEventModel),
-    selectedEvent: types.maybe(types.reference(TimelineEventModel)),
+    events: types.array(types.union(JobEventModel, SchoolEventModel)),
+    selectedEvent: types.maybe(types.reference(types.union(JobEventModel, SchoolEventModel))),
   })
   .views(self => ({
     get sortedEvents() {

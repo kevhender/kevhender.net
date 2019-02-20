@@ -1,8 +1,9 @@
 import { PropTypes as MobxPropTypes, inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
 import Card from '@material-ui/core/es/Card/Card';
+import JobEvent from './JobEvent';
 import PropTypes from 'prop-types';
-import TimelineEventContent from './TimelineEventContent';
+import SchoolEvent from './SchoolEvent';
 import classnames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 
@@ -66,6 +67,11 @@ class TimelineEvent extends Component {
     classes: {},
   };
 
+  static eventClassMap = {
+    employment: JobEvent,
+    school: SchoolEvent,
+  };
+
   onSelectEvent = event => {
     this.props.timeline.selectEvent(event);
   };
@@ -77,6 +83,11 @@ class TimelineEvent extends Component {
       timeline,
       isOdd,
     } = this.props;
+    const Event = TimelineEvent.eventClassMap[event.type];
+    if (!Event) {
+      console.error(`No class type mapped in TimelineEvent.eventClassMap for type '${event.type}'.`);
+      return null;
+    }
 
     return (
       <div
@@ -99,7 +110,7 @@ class TimelineEvent extends Component {
           onMouseOut={() => this.onSelectEvent(null)}
           onBlur={() => this.onSelectEvent(null)}
         >
-          <TimelineEventContent event={event} />
+          <Event event={event} />
         </Card>
       </div>
     );
