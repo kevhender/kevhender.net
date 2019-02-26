@@ -7,14 +7,12 @@ import SchoolEvent from './SchoolEvent';
 import classnames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 
-const TRIANGLE_WIDTH = '15px';
-
 /**
  * Displays a Timeline event
  */
 @withStyles(theme => ({
   root: {
-    'margin': `5px ${TRIANGLE_WIDTH}`,
+    'margin': `5px ${theme.timeline.arrowWidth}`,
     'position': 'relative',
     'maxWidth': `${theme.timeline.eventWidth}px`,
     'flex': 1,
@@ -25,20 +23,20 @@ const TRIANGLE_WIDTH = '15px';
       top: '10px',
       width: 0,
       zIndex: 1,
-      right: `-${TRIANGLE_WIDTH}`,
+      right: `-${theme.timeline.arrowWidth}`,
       borderStyle: 'solid',
-      borderWidth: `${TRIANGLE_WIDTH} 0 ${TRIANGLE_WIDTH} ${TRIANGLE_WIDTH}`,
+      borderWidth: `${theme.timeline.arrowWidth} 0 ${theme.timeline.arrowWidth} ${theme.timeline.arrowWidth}`,
       borderColor: `transparent ${theme.palette.primary.main} transparent ${theme.palette.primary.main}`,
       [theme.breakpoints.down('sm')]: {
-        left: `-${TRIANGLE_WIDTH}`,
-        borderWidth: `${TRIANGLE_WIDTH} ${TRIANGLE_WIDTH} ${TRIANGLE_WIDTH} 0`,
+        left: `-${theme.timeline.arrowWidth}`,
+        borderWidth: `${theme.timeline.arrowWidth} ${theme.timeline.arrowWidth} ${theme.timeline.arrowWidth} 0`,
       },
     },
   },
   evenRoot: {
     '&:before': {
-      left: `-${TRIANGLE_WIDTH}`,
-      borderWidth: `${TRIANGLE_WIDTH} ${TRIANGLE_WIDTH} ${TRIANGLE_WIDTH} 0`,
+      left: `-${theme.timeline.arrowWidth}`,
+      borderWidth: `${theme.timeline.arrowWidth} ${theme.timeline.arrowWidth} ${theme.timeline.arrowWidth} 0`,
     },
   },
   selected: {

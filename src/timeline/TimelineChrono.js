@@ -23,7 +23,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
     justifyContent: 'stretch',
     order: 2,
     [theme.breakpoints.down('sm')]: {
-      width: `${theme.timeline.chronoWidth / 3}px`,
+      width: `${theme.timeline.chronoWidth / 2}px`,
     },
   },
   label: {

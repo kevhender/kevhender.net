@@ -28,6 +28,14 @@ module.exports = {
           ],
         },
       },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader' },
+          { loader: 'react-svg-loader' },
+        ],
+      },
       // {
       //   test: /\.js$/,
       //   exclude: /node_modules/,
