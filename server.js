@@ -28,10 +28,9 @@ app.use(webpackHotMiddleware(compiler, {
 app.use(express.static(`${__dirname}/www`));
 app.use(express.static(`${__dirname}/resources`));
 
-const serverPort = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-const serverIpAddress = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+const serverPort = process.env.PORT || 3000;
 
-const server = app.listen(serverPort, serverIpAddress, () => {
+const server = app.listen(serverPort, () => {
   const { address, port } = server.address();
   console.log('App listening at http://%s:%s', address, port);
 });
