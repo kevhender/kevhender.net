@@ -49,7 +49,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   },
   selectedSpacer: {
     backgroundColor: theme.palette.secondary.main,
-    boxShadow: `0 0 12px ${theme.palette.secondary.main}`,
+    boxShadow: `0 0 10px ${theme.palette.secondary.main}`,
   },
   monthSpacer: {
     flex: '1 0 8px',
@@ -70,12 +70,12 @@ import withStyles from '@material-ui/core/styles/withStyles';
     borderColor: theme.palette.secondary.main,
   },
 }))
-@inject('timeline')
+@inject('app')
 @observer
 class TimelineChrono extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),
-    timeline: MobxPropTypes.observableObject.isRequired,
+    app: MobxPropTypes.observableObject.isRequired,
     currentEvent: MobxPropTypes.observableObject.isRequired,
     isFirst: PropTypes.bool.isRequired,
     isLast: PropTypes.bool.isRequired,
@@ -86,7 +86,7 @@ class TimelineChrono extends Component {
   };
 
   renderYearLabel(year, isLast) {
-    const { classes, timeline } = this.props;
+    const { classes, app: { selectedTimelineEvent } } = this.props;
     const now = new Date();
     return (
       <Typography
@@ -94,7 +94,7 @@ class TimelineChrono extends Component {
         className={classnames(
           classes.label,
           {
-            [classes.selectedSpacer]: isDateInSelectedRange(timeline, new Date(`${isLast ? '12/31' : '01/01'}/${year === 'Present' ? now.getFullYear() : year}`)),
+            [classes.selectedSpacer]: isDateInSelectedRange(selectedTimelineEvent, new Date(`${isLast ? '12/31' : '01/01'}/${year === 'Present' ? now.getFullYear() : year}`)),
             [classes.presentYearLabel]: year === 'Present',
           },
         )}
@@ -106,21 +106,21 @@ class TimelineChrono extends Component {
   }
 
   renderSpacer(month, year) {
-    const { classes, timeline } = this.props;
+    const { classes, app: { selectedTimelineEvent } } = this.props;
     return (
       <div
         key={`${year}-${month}`}
         className={classnames(
           classes.spacer,
           classes.monthSpacer,
-          { [classes.selectedSpacer]: isDateInSelectedRange(timeline, new Date(`${month + 1}/01/${year === 'Present' ? new Date().getFullYear() : year}`)) },
+          { [classes.selectedSpacer]: isDateInSelectedRange(selectedTimelineEvent, new Date(`${month + 1}/01/${year === 'Present' ? new Date().getFullYear() : year}`)) },
         )}
       />
     );
   }
 
   renderMultiYearSpacer(year) {
-    const { classes, timeline } = this.props;
+    const { classes, app: { selectedTimelineEvent } } = this.props;
     const testDate = new Date(`01/01/${year}`);
     return (
       <Fragment key={`multiYear-${year}`}>
@@ -128,20 +128,20 @@ class TimelineChrono extends Component {
           className={classnames(
             classes.spacer,
             classes.multiYearSpacer,
-            { [classes.selectedSpacer]: isDateInSelectedRange(timeline, testDate) },
+            { [classes.selectedSpacer]: isDateInSelectedRange(selectedTimelineEvent, testDate) },
           )}
         />
         <div
           className={classnames(
             classes.multiYearBreak,
-            { [classes.selectedYearBreak]: isDateInSelectedRange(timeline, testDate) },
+            { [classes.selectedYearBreak]: isDateInSelectedRange(selectedTimelineEvent, testDate) },
           )}
         />
         <div
           className={classnames(
             classes.spacer,
             classes.multiYearSpacer,
-            { [classes.selectedSpacer]: isDateInSelectedRange(timeline, testDate) },
+            { [classes.selectedSpacer]: isDateInSelectedRange(selectedTimelineEvent, testDate) },
           )}
         />
       </Fragment>
@@ -169,12 +169,12 @@ class TimelineChrono extends Component {
   render() {
     const {
       classes,
-      timeline,
+      app: { sortedTimelineEvents },
       currentEvent,
       isFirst,
       isLast,
     } = this.props;
-    const { startDate, endDate } = getEventUIRange(timeline, currentEvent);
+    const { startDate, endDate } = getEventUIRange(sortedTimelineEvents, currentEvent);
     const monthRange = getMonthsForRange(startDate, endDate);
     const firstMonth = head(monthRange) || {};
     const lastMonth = last(monthRange) || {};

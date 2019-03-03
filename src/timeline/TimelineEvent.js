@@ -48,15 +48,15 @@ import withStyles from '@material-ui/core/styles/withStyles';
     boxShadow: `0 0 2px 3px ${theme.palette.primary.main}`,
   },
   selectedCard: {
-    boxShadow: `0 0 8px 4px ${theme.palette.secondary.main}`,
+    boxShadow: `0 0 4px 4px ${theme.palette.secondary.main}`,
   },
 }))
-@inject('timeline')
+@inject('app')
 @observer
 class TimelineEvent extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),
-    timeline: MobxPropTypes.observableObject.isRequired,
+    app: MobxPropTypes.observableObject.isRequired,
     event: MobxPropTypes.observableObject.isRequired,
     isOdd: PropTypes.bool.isRequired,
   };
@@ -71,14 +71,14 @@ class TimelineEvent extends Component {
   };
 
   onSelectEvent = event => {
-    this.props.timeline.selectEvent(event);
+    this.props.app.selectTimelineEvent(event);
   };
 
   render() {
     const {
       classes,
       event,
-      timeline,
+      app,
       isOdd,
     } = this.props;
     const Event = TimelineEvent.eventClassMap[event.type];
@@ -93,14 +93,14 @@ class TimelineEvent extends Component {
           classes.root,
           {
             [classes.evenRoot]: !isOdd,
-            [classes.selected]: event === timeline.selectedEvent,
+            [classes.selected]: event === app.selectedTimelineEvent,
           },
         )}
       >
         <Card
           className={classnames(
             classes.card,
-            { [classes.selectedCard]: event === timeline.selectedEvent },
+            { [classes.selectedCard]: event === app.selectedTimelineEvent },
           )}
           key={event.name}
           onMouseOver={() => this.onSelectEvent(event)}

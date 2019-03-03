@@ -96,11 +96,12 @@ class NavBar extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),
     visible: PropTypes.bool.isRequired,
-    selected: PropTypes.string.isRequired,
+    selected: PropTypes.string,
   };
 
   static defaultProps = {
     classes: {},
+    selected: null,
   };
 
   render() {

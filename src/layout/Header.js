@@ -8,6 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
   root: {
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
     background: `linear-gradient(${theme.palette.primary.main}, ${theme.palette.secondary.light}, ${theme.palette.primary.light})`,

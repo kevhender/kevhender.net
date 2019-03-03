@@ -42,11 +42,11 @@ import withStyles from '@material-ui/core/styles/withStyles';
     order: 1,
   },
 }))
-@inject('timeline')
+@inject('app')
 class Timeline extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),
-    timeline: MobxPropTypes.observableObject.isRequired,
+    app: MobxPropTypes.observableObject.isRequired,
   };
 
   static defaultProps = {
@@ -54,8 +54,8 @@ class Timeline extends Component {
   };
 
   render() {
-    const { classes, timeline } = this.props;
-    const events = timeline.sortedEvents;
+    const { classes, app } = this.props;
+    const events = app.sortedTimelineEvents;
     return events.map((event, idx) => (
       <div className={classes.eventRow} key={event.name}>
         <div

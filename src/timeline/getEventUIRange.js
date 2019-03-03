@@ -3,13 +3,12 @@ import get from 'lodash/get';
 /**
  * Gets the range of time to display on the UI for an event, based on its relation to
  *  other events in the timeline.
- * @param {Timeline} timeline The timeline
+ * @param {TimelineEvent[]} sortedEvents Events from the timeline
  * @param {TimelineEvent} event The event to check
  * @return {{endDate: Date, startDate: Date}} An object with the start and end dates to
  *  show on the UI.
  */
-export default function getEventUIRange(timeline, event) {
-  const { sortedEvents } = timeline;
+export default function getEventUIRange(sortedEvents, event) {
   const currentEventIndex = sortedEvents.findIndex(ev => ev === event);
   const nextEvent = sortedEvents[currentEventIndex + 1];
   const ongoingEvents = sortedEvents.filter((ev, idx) => (

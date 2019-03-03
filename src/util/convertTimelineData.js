@@ -29,14 +29,14 @@ const MODEL_TYPE_MAP = {
 };
 
 export default function convertTimelineData(rawData) {
-  return rawData.map(event => {
-    return MODEL_TYPE_MAP[event.type].create({
+  return rawData.map(event => (
+    MODEL_TYPE_MAP[event.type].create({
       ...pick(event, DIRECTLY_MAPPED_PROPS),
       id: `${event.name}-${event.dates.from}`,
       startDate: new Date(moment(event.dates.from, 'M/YYYY')),
       endDate: event.dates.to ? new Date(moment(event.dates.to, 'M/YYYY')) : new Date(),
       logo: event.logo ? `/images/logos/${event.logo}` : undefined,
       graduated: event.graduated ? new Date(moment(event.graduated, 'M/YYYY')) : undefined,
-    });
-  });
+    })
+  ));
 }

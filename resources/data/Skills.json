@@ -1,0 +1,392 @@
+{
+  "categories": [
+    {
+      "id": "html",
+      "name": "HTML5 / CSS3",
+      "relevance": 0.9
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "relevance": 0.5
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "relevance": 1
+    },
+    {
+      "id": "process",
+      "name": "Process",
+      "relevance": 0.6
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "relevance": 0.8
+    }
+  ],
+  "skills": [
+    {
+      "id": "es6",
+      "name": "ES6",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "react",
+      "name": "React + JSX",
+      "categoryId": "javascript",
+      "competence": 0.9,
+      "relevance": 1
+    },
+    {
+      "id": "node",
+      "name": "Node.js",
+      "categoryId": "javascript",
+      "competence": 0.9,
+      "relevance": 1
+    },
+    {
+      "id": "mobx",
+      "name": "MobX",
+      "categoryId": "javascript",
+      "competence": 0.9,
+      "relevance": 1
+    },
+    {
+      "id": "redux",
+      "name": "Redux",
+      "categoryId": "javascript",
+      "competence": 0.55,
+      "relevance": 1
+    },
+    {
+      "id": "extjs",
+      "name": "ExtJS",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 0.9
+    },
+    {
+      "id": "lodash",
+      "name": "Lodash",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "promises",
+      "name": "Promises",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "async",
+      "name": "asynch / await",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "eslint",
+      "name": "ESLint",
+      "categoryId": "javascript",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "materialui",
+      "name": "MaterialUI",
+      "categoryId": "javascript",
+      "competence": 0.9,
+      "relevance": 0.9
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha / Chai",
+      "categoryId": "javascript",
+      "competence": 0.8,
+      "relevance": 0.9
+    },
+    {
+      "id": "webpack",
+      "name": "Webpack",
+      "categoryId": "javascript",
+      "competence": 0.7,
+      "relevance": 0.9
+    },
+    {
+      "id": "siesta",
+      "name": "Siesta",
+      "categoryId": "javascript",
+      "competence": 0.7,
+      "relevance": 0.2
+    },
+    {
+      "id": "angular",
+      "name": "AngularJS",
+      "categoryId": "javascript",
+      "competence": 0.5,
+      "relevance": 0.5
+    },
+    {
+      "id": "jquery",
+      "name": "jQuery",
+      "categoryId": "javascript",
+      "competence": 0.6,
+      "relevance": 0.6
+    },
+
+    {
+      "id": "jss",
+      "name": "JSS",
+      "categoryId": "html",
+      "competence": 0.9,
+      "relevance": 0.9
+    },
+    {
+      "id": "sass",
+      "name": "SASS",
+      "categoryId": "html",
+      "competence": 0.9,
+      "relevance": 0.9
+    },
+    {
+      "id": "less",
+      "name": "LESS",
+      "categoryId": "html",
+      "competence": 0.7,
+      "relevance": 0.7
+    },
+    {
+      "id": "precss",
+      "name": "PreCss / PostCss",
+      "categoryId": "html",
+      "competence": 0.9,
+      "relevance": 0.7
+    },
+    {
+      "id": "html5",
+      "name": "HTML 5",
+      "categoryId": "html",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "css3",
+      "name": "CSS 3",
+      "categoryId": "html",
+      "competence": 1,
+      "relevance": 1
+    },
+
+    {
+      "id": "java",
+      "name": "Java",
+      "categoryId": "java",
+      "competence": 0.8,
+      "relevance": 0.6
+    },
+    {
+      "id": "phonegap",
+      "name": "PhoneGap (Cordova)",
+      "categoryId": "java",
+      "competence": 0.7,
+      "relevance": 0.5
+    },
+    {
+      "id": "android",
+      "name": "Android",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.5
+    },
+    {
+      "id": "spring",
+      "name": "Spring Framework",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.5
+    },
+    {
+      "id": "springsec",
+      "name": "Spring Security",
+      "categoryId": "java",
+      "competence": 0.5,
+      "relevance": 0.4
+    },
+    {
+      "id": "struts",
+      "name": "Struts",
+      "categoryId": "java",
+      "competence": 0.7,
+      "relevance": 0.3
+    },
+    {
+      "id": "jsp",
+      "name": "JSP Custom Tags",
+      "categoryId": "java",
+      "competence": 0.8,
+      "relevance": 0.3
+    },
+    {
+      "id": "hibernate",
+      "name": "Hibernate",
+      "categoryId": "java",
+      "competence": 0.8,
+      "relevance": 0.5
+    },
+    {
+      "id": "guava",
+      "name": "Guava",
+      "categoryId": "java",
+      "competence": 0.5,
+      "relevance": 0.4
+    },
+    {
+      "id": "log4j",
+      "name": "Log4J",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.4
+    },
+    {
+      "id": "ant",
+      "name": "Ant",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.4
+    },
+    {
+      "id": "maven",
+      "name": "Maven",
+      "categoryId": "java",
+      "competence": 0.4,
+      "relevance": 0.4
+    },
+    {
+      "id": "jackson",
+      "name": "Jackson JSON",
+      "categoryId": "java",
+      "competence": 0.7,
+      "relevance": 0.3
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper Reports",
+      "categoryId": "java",
+      "competence": 0.7,
+      "relevance": 0.3
+    },
+    {
+      "id": "apache",
+      "name": "Apache Commons",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.3
+    },
+    {
+      "id": "velocity",
+      "name": "Velocity",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.2
+    },
+    {
+      "id": "tomcat",
+      "name": "Tomcat",
+      "categoryId": "java",
+      "competence": 0.6,
+      "relevance": 0.3
+    },
+    {
+      "id": "javamelody",
+      "name": "Java Melody",
+      "categoryId": "java",
+      "competence": 0.3,
+      "relevance": 0.2
+    },
+
+    {
+      "id": "intellij",
+      "name": "IntelliJ IDEA",
+      "categoryId": "software",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "eclipse",
+      "name": "Eclipse",
+      "categoryId": "software",
+      "competence": 0.5,
+      "relevance": 0.3
+    },
+    {
+      "id": "webkit",
+      "name": "Webkit debugging",
+      "categoryId": "software",
+      "competence": 0.9,
+      "relevance": 1
+    },
+    {
+      "id": "firebug",
+      "name": "Firebug",
+      "categoryId": "software",
+      "competence": 1,
+      "relevance": 0.9
+    },
+    {
+      "id": "iosandroid",
+      "name": "iOS/Android debugging",
+      "categoryId": "software",
+      "competence": 1,
+      "relevance": 0.9
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP Editor",
+      "categoryId": "software",
+      "competence": 0.7,
+      "relevance": 0.7
+    },
+
+    {
+      "id": "github",
+      "name": "GitHub",
+      "categoryId": "process",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "jira",
+      "name": "Jira",
+      "categoryId": "process",
+      "competence": 1,
+      "relevance": 1
+    },
+    {
+      "id": "agile",
+      "name": "Agile / Scrum",
+      "categoryId": "process",
+      "competence": 0.8,
+      "relevance": 0.8
+    },
+    {
+      "id": "tdd",
+      "name": "Test Driven Development",
+      "categoryId": "process",
+      "competence": 0.8,
+      "relevance": 0.8
+    },
+    {
+      "id": "subversion",
+      "name": "Subversion",
+      "categoryId": "process",
+      "competence": 0.9,
+      "relevance": 0.4
+    }
+  ]
+}

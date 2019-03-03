@@ -5,6 +5,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
   root: {
+    width: '100%',
     background: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     marginTop: '1rem',

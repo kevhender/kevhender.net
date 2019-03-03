@@ -1,7 +1,7 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 const MAROON = '#8b4b5b';
-const ORANGE = '#d26a43';
+const ORANGE = '#f08c3c';
 
 const MAX_WIDTH = 1000;
 

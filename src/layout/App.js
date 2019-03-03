@@ -1,18 +1,32 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import NavBar from './NavBar';
 import PropTypes from 'prop-types';
+import SkillShowcase from '../skills/SkillShowcase';
 import Timeline from '../timeline/Timeline';
+import { Typography } from '@material-ui/core';
 import VisibilitySensor from 'react-visibility-sensor';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
-  anchorTag: {
-    position: 'absolute',
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
-  timeline: {
-    marginTop: theme.spacing.unit * 3,
+  pageSection: {
+    width: '100%',
+    maxWidth: theme.body.maxWidth,
+  },
+  sectionHeader: {
+    ...theme.typography.h4,
+    fontWeight: 'bold',
+    margin: '2.5rem 0 1.5rem 0',
+    padding: '.5rem',
+    background: `linear-gradient(${fade(theme.palette.primary.light, 0.3)}, ${fade(theme.palette.secondary.light, 0.3)})`,
+    borderBottom: `5px solid ${theme.palette.primary.main}`,
   },
 }))
 class Root extends Component {
@@ -64,10 +78,10 @@ class Root extends Component {
     const { classes } = this.props;
     const visSensorProps = {
       partialVisibility: true,
-      offset: { top: 400 },
+      offset: { top: 100 },
     };
     return (
-      <Fragment>
+      <div className={classes.root}>
         <VisibilitySensor
           onChange={isVis => this.setVisible('header', isVis)}
           partialVisibility
@@ -75,36 +89,34 @@ class Root extends Component {
           <Header />
         </VisibilitySensor>
         <NavBar visible={this.state.selectedSection !== null} selected={this.state.selectedSection} />
-        <span
-          className={classes.anchorTag}
-          id="skills"
-        />
         <VisibilitySensor
           onChange={isVis => this.setVisible('skills', isVis)}
           {...visSensorProps}
-        />
-        <span
-          className={classes.anchorTag}
-          id="timeline"
-        />
+        >
+          <div className={classes.pageSection} id="skills">
+            <Typography className={classes.sectionHeader}>Skills</Typography>
+            <SkillShowcase />
+          </div>
+        </VisibilitySensor>
         <VisibilitySensor
           onChange={isVis => this.setVisible('timeline', isVis)}
           {...visSensorProps}
         >
-          <div className={classes.timeline}>
+          <div className={classes.pageSection} id="timeline">
+            <Typography className={classes.sectionHeader}>Timeline</Typography>
             <Timeline />
           </div>
         </VisibilitySensor>
-        <span
-          className={classes.anchorTag}
-          id="contact"
-        />
         <VisibilitySensor
           onChange={isVis => this.setVisible('contact', isVis)}
           {...visSensorProps}
-        />
+        >
+          <div className={classes.pageSection} id="contact">
+            <Typography className={classes.sectionHeader}>Contact Me</Typography>
+          </div>
+        </VisibilitySensor>
         <Footer />
-      </Fragment>
+      </div>
     );
   }
 }
