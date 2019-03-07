@@ -31,5 +31,12 @@ export default function createTheme() {
       arrowWidth: 15,
       eventWidth: (MAX_WIDTH - 90 - 8 - 15 - 15) / 2,
     },
+    overrides: {
+      MuiDialogTitle: {
+        root: {
+          padding: '0 0 24px 0',
+        },
+      },
+    },
   });
 }

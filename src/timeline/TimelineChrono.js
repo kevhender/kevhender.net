@@ -16,7 +16,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 @withStyles(theme => ({
   root: {
     width: `${theme.timeline.chronoWidth}px`,
-    padding: '0 .5rem',
+    padding: `0 ${theme.spacing.unit}px`,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -29,7 +29,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   label: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    padding: '.4rem .7rem',
+    padding: `${theme.spacing.unit * 0.8}px ${theme.spacing.unit * 1.4}px`,
     borderRadius: '8px',
     [theme.breakpoints.down('sm')]: {
       transform: 'rotate(270deg)',

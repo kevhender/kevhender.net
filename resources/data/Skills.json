@@ -368,6 +368,20 @@
       "relevance": 1
     },
     {
+      "id": "circleci",
+      "name": "CircleCI",
+      "categoryId": "process",
+      "competence": 0.8,
+      "relevance": 1
+    },
+    {
+      "id": "travisci",
+      "name": "Travis CI",
+      "categoryId": "process",
+      "competence": 0.8,
+      "relevance": 0.8
+    },
+    {
       "id": "agile",
       "name": "Agile / Scrum",
       "categoryId": "process",

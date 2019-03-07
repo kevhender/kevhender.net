@@ -55,7 +55,7 @@ export default function asTimelineContent(WrappedComponent) {
       display: 'flex',
       alignItems: 'center',
       fontStyle: 'italic',
-      marginBottom: '1rem',
+      marginBottom: theme.spacing.unit * 2,
     },
     calendar: {
       color: theme.palette.primary.main,

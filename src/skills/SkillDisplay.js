@@ -7,7 +7,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 @withStyles(theme => ({
   root: {
     display: 'flex',
-    margin: '.5rem 0',
+    margin: `${theme.spacing.unit}px 0`,
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -18,7 +18,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
     ...theme.typography.h6,
     color: theme.palette.primary.main,
     flex: '0 0 100px',
-    marginRight: '1rem',
+    marginRight: theme.spacing.unit * 2,
     textAlign: 'right',
     [theme.breakpoints.down('sm')]: {
       flex: '0',
@@ -26,13 +26,13 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
     },
   },
   progressRoot: {
-    height: 'calc(1rem + 6px)',
+    height: `calc(${theme.spacing.unit * 2}px + 6px)`,
     borderRadius: '3px',
     backgroundColor: fade(theme.palette.secondary.light, 0.5),
     boxShadow: `0 0 2px 2px ${theme.palette.primary.main}`,
     flex: '1 0 300px',
     [theme.breakpoints.down('sm')]: {
-      flex: '0 0 calc(1rem + 6px)',
+      flex: `0 0 calc(${theme.spacing.unit * 2}px + 6px)`,
     },
   },
   progressBar: {

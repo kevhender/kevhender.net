@@ -49,7 +49,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
     verticalAlign: 'middle',
     [theme.breakpoints.down('xs')]: {
       display: 'block',
-      margin: '2rem 1rem',
+      margin: `${theme.spacing.unit * 4}px ${theme.spacing.unit * 2}px`,
     },
   },
 }))

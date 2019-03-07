@@ -17,11 +17,11 @@ const AVATAR_HEIGHT = 40;
     transition: 'top .3s ease-out',
   },
   rootHidden: {
-    top: `calc(-${AVATAR_HEIGHT}px - 1.5rem)`,
+    top: `calc(-${AVATAR_HEIGHT}px - ${theme.spacing.unit * 3}px)`,
   },
   navBar: {
     backgroundImage: `linear-gradient(${theme.palette.primary.main}, ${theme.palette.primary.light})`,
-    padding: '.5rem 1rem',
+    padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
     display: 'flex',
     justifyContent: 'center',
   },
@@ -35,15 +35,15 @@ const AVATAR_HEIGHT = 40;
   avatar: {
     height: `${AVATAR_HEIGHT}px`,
     width: `${AVATAR_HEIGHT}px`,
-    marginRight: '.5rem',
+    marginRight: theme.spacing.unit,
   },
   navLinkWrap: {
-    'paddingTop': '.3rem',
+    'paddingTop': theme.spacing.unit * 0.6,
     '&:after': {
       content: '""',
       backgroundColor: theme.palette.primary.contrastText,
       width: '100%',
-      height: '0.3rem',
+      height: theme.spacing.unit * 0.6,
       display: 'block',
       transition: 'all .2s ease-in-out 0s',
       visibility: 'hidden',
@@ -81,14 +81,14 @@ const AVATAR_HEIGHT = 40;
   socialIcon: {
     height: '32px',
     width: '32px',
-    marginLeft: '.75rem',
+    marginLeft: theme.spacing.unit * 1.5,
     fill: theme.palette.primary.contrastText,
     [theme.breakpoints.down('xs')]: {
       display: 'none',
     },
   },
   spacer: {
-    height: '.5rem',
+    height: theme.spacing.unit,
     backgroundImage: `linear-gradient(${theme.palette.background.default}, transparent)`,
   },
 }))

@@ -14,7 +14,7 @@ import SkillDisplay from './SkillDisplay';
 @withStyles(theme => ({
   root: {
     display: 'block',
-    padding: '0 1rem',
+    padding: `0 ${theme.spacing.unit * 2}px`,
   },
   categoryHeader: {
     'maxWidth': theme.body.maxWidth,
@@ -38,7 +38,7 @@ import SkillDisplay from './SkillDisplay';
     justifyContent: 'space-between',
   },
   skill: {
-    flex: '0 0 calc(50% - 1rem)',
+    flex: `0 0 calc(50% - ${theme.spacing.unit * 2}px)`,
     [theme.breakpoints.down('xs')]: {
       flex: '0 0 100%',
     },
@@ -64,7 +64,11 @@ class SkillShowcase extends Component {
           sortedSkillCategories.map(skillCategory => {
             const sortedSkills = app.getSortedSkills(skillCategory);
             return (
-              <ExpansionPanel className={classes.category} defaultExpanded={skillCategory.relevance >= 0.6}>
+              <ExpansionPanel
+                key={skillCategory}
+                className={classes.category}
+                defaultExpanded={skillCategory.relevance >= 0.6}
+              >
                 <ExpansionPanelSummary
                   className={classes.categoryHeader}
                   expandIcon={<ExpandMoreIcon />}

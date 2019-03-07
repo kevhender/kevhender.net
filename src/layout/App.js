@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ContactForm from '../contact/ContactForm';
 import Footer from './Footer';
 import Header from './Header';
 import NavBar from './NavBar';
@@ -27,6 +28,9 @@ import withStyles from '@material-ui/core/styles/withStyles';
     padding: '.5rem',
     background: `linear-gradient(${fade(theme.palette.primary.light, 0.3)}, ${fade(theme.palette.secondary.light, 0.3)})`,
     borderBottom: `5px solid ${theme.palette.primary.main}`,
+  },
+  bottomSpacer: {
+    height: theme.spacing.unit * 10,
   },
 }))
 class Root extends Component {
@@ -113,8 +117,10 @@ class Root extends Component {
         >
           <div className={classes.pageSection} id="contact">
             <Typography className={classes.sectionHeader}>Contact Me</Typography>
+            <ContactForm />
           </div>
         </VisibilitySensor>
+        <div className={classes.bottomSpacer} />
         <Footer />
       </div>
     );
