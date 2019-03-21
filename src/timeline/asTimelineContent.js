@@ -11,15 +11,16 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography/Typography';
+import isFunction from 'lodash/isFunction';
 import moment from 'moment';
 import withStyles from '@material-ui/core/styles/withStyles';
-
 
 /**
  * Displays a Timeline event
  */
-export default function asTimelineContent(WrappedComponent) {
+const asTimelineContent = (stylesFn = () => ({})) => WrappedComponent => {
   @withStyles(theme => ({
+    ...stylesFn(theme),
     header: {
       backgroundColor: theme.palette.primary.light,
     },
@@ -89,6 +90,7 @@ export default function asTimelineContent(WrappedComponent) {
 
     state = {
       expanded: false,
+      tabIndex: 0,
     };
 
     handleExpandClick = () => {
@@ -134,9 +136,10 @@ export default function asTimelineContent(WrappedComponent) {
       );
     }
 
-    renderFooter(collapsibleContent) {
+    renderFooter() {
       const { classes, event } = this.props;
       const { expanded } = this.state;
+      const collapsibleContent = isFunction(this.renderTabs) ? this.renderTabs() : null;
 
       return (
         <Fragment>
@@ -165,4 +168,6 @@ export default function asTimelineContent(WrappedComponent) {
   }
 
   return TimelineContent;
-}
+};
+
+export default asTimelineContent;

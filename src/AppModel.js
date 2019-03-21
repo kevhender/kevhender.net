@@ -34,6 +34,9 @@ const AppModel = types
           return relevanceDiff;
         });
     },
+    getSkillById(skillId) {
+      return self.skills.find(skill => skill.id === skillId);
+    },
   }))
   .actions(self => ({
     selectTimelineEvent(event) {

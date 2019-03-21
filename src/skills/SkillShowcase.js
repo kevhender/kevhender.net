@@ -37,12 +37,6 @@ import SkillDisplay from './SkillDisplay';
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  skill: {
-    flex: `0 0 calc(50% - ${theme.spacing.unit * 2}px)`,
-    [theme.breakpoints.down('xs')]: {
-      flex: '0 0 100%',
-    },
-  },
 }))
 @inject('app')
 class SkillShowcase extends Component {
@@ -81,7 +75,6 @@ class SkillShowcase extends Component {
                   {sortedSkills.map(skill => (
                     <SkillDisplay
                       key={skill}
-                      classes={{ root: classes.skill }}
                       skill={skill}
                     />
                   ))}

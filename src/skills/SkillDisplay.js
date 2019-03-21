@@ -9,6 +9,10 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
     display: 'flex',
     margin: `${theme.spacing.unit}px 0`,
     alignItems: 'center',
+    flex: `0 0 calc(50% - ${theme.spacing.unit * 2}px)`,
+    [theme.breakpoints.down('xs')]: {
+      flex: '0 0 100%',
+    },
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       alignItems: 'inherit',
@@ -37,7 +41,6 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
   },
   progressBar: {
     backgroundColor: fade(theme.palette.secondary.main, 0.7),
-
     margin: '2px',
     width: 'calc(100% - 4px)',
   },
@@ -45,7 +48,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 class SkillDisplay extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),
-    skill: MobxPropTypes.observableObject.isRequired,
+    skill: PropTypes.oneOfType([PropTypes.object, MobxPropTypes.observableObject]).isRequired,
   };
 
   static defaultProps = {

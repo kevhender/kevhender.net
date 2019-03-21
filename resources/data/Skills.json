@@ -24,6 +24,11 @@
       "id": "software",
       "name": "Software",
       "relevance": 0.8
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "relevance": 0.4
     }
   ],
   "skills": [
@@ -401,6 +406,27 @@
       "categoryId": "process",
       "competence": 0.9,
       "relevance": 0.4
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "categoryId": "other",
+      "competence": 0.5,
+      "relevance": 0.2
+    },
+    {
+      "id": "plsql",
+      "name": "Oracle PL-SQL",
+      "categoryId": "other",
+      "competence": 0.3,
+      "relevance": 0.1
+    },
+    {
+      "id": "weblogic",
+      "name": "Weblogic",
+      "categoryId": "other",
+      "competence": 0.3,
+      "relevance": 0.1
     }
   ]
 }

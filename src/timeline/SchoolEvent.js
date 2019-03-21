@@ -7,7 +7,7 @@ import arrayToEnglish from '../util/arrayToEnglish';
 import asTimelineContent from './asTimelineContent';
 import moment from 'moment';
 
-@asTimelineContent
+@asTimelineContent()
 class SchoolEvent extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string),

@@ -6,9 +6,9 @@ import { types } from 'mobx-state-tree';
 const SkillModel = types
   .model('SkillModel', {
     id: types.identifier,
-    name: types.string,
-    relevance: types.number,
-    competence: types.number,
+    name: types.maybe(types.string),
+    relevance: types.maybe(types.number),
+    competence: types.maybe(types.number),
     // TODO - get this to work as a reference
     categoryId: types.maybe(types.string),
   })

@@ -37,6 +37,26 @@ export default function createTheme() {
           padding: '0 0 24px 0',
         },
       },
+      MuiListItem: {
+        root: {
+          paddingTop: '4px',
+          paddingBottom: '4px',
+        },
+      },
+      MuiListItemText: {
+        root: {
+          padding: '0',
+        },
+      },
+      MuiListItemIcon: {
+        root: {
+          'alignSelf': 'flex-start',
+          'marginRight': '8px',
+          '& svg': {
+            color: MAROON,
+          },
+        },
+      },
     },
   });
 }

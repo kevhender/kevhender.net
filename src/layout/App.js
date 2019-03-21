@@ -24,8 +24,8 @@ import withStyles from '@material-ui/core/styles/withStyles';
   sectionHeader: {
     ...theme.typography.h4,
     fontWeight: 'bold',
-    margin: '2.5rem 0 1.5rem 0',
-    padding: '.5rem',
+    margin: `${theme.spacing.unit * 7}px 0 ${theme.spacing.unit * 3}px 0`,
+    padding: theme.spacing.unit,
     background: `linear-gradient(${fade(theme.palette.primary.light, 0.3)}, ${fade(theme.palette.secondary.light, 0.3)})`,
     borderBottom: `5px solid ${theme.palette.primary.main}`,
   },
