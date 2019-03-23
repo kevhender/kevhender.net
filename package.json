@@ -12,6 +12,9 @@
   "keywords": [
     "kevhender"
   ],
+  "engines": {
+    "node": "8.14.0"
+  },
   "author": "Kevin Henderson",
   "license": "MIT",
   "repository": {
