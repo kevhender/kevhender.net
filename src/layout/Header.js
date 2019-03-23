@@ -52,6 +52,11 @@ import withStyles from '@material-ui/core/styles/withStyles';
       margin: `${theme.spacing.unit * 4}px ${theme.spacing.unit * 2}px`,
     },
   },
+  myName: {
+    ...theme.typography.h3,
+    marginBottom: theme.spacing.unit,
+    fontWeight: 'bold',
+  },
 }))
 class Header extends Component {
   static propTypes = {
@@ -82,8 +87,11 @@ class Header extends Component {
             </span>
           </div>
           <div className={classes.rightContent}>
-            <Typography variant="h3">
+            <Typography className={classes.myName}>
               Kevin Henderson
+            </Typography>
+            <Typography variant="h5">
+              JavaScript development &amp; consulting
             </Typography>
           </div>
         </div>
