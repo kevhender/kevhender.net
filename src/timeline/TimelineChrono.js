@@ -24,6 +24,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
     order: 2,
     [theme.breakpoints.down('sm')]: {
       width: `${theme.timeline.chronoWidth / 2}px`,
+      flex: `0 0 ${theme.timeline.chronoWidth / 2}px`,
     },
   },
   label: {
