@@ -1,15 +1,13 @@
-import {
-  ExpansionPanel,
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-  Typography,
-  withStyles,
-} from '@material-ui/core';
 import { PropTypes as MobxPropTypes, inject } from 'mobx-react';
 import React, { Component } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import PropTypes from 'prop-types';
 import SkillDisplay from './SkillDisplay';
+import Typography from '@material-ui/core/Typography';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
   root: {

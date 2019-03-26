@@ -1,18 +1,17 @@
-import {
-  CircularProgress,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText, DialogTitle,
-  withStyles,
-} from '@material-ui/core';
 import React, { Component, Fragment } from 'react';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import PropTypes from 'prop-types';
 import SendIcon from '@material-ui/icons/Send';
 import TextField from '@material-ui/core/TextField';
 import identity from 'lodash/identity';
 import validateEmail from '../util/validateEmail';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
   root: {

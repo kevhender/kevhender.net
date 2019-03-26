@@ -3,7 +3,7 @@ import GithubIcon from '../../resources/images/icons/github.svg';
 import LinkedInIcon from '../../resources/images/icons/linkedin.svg';
 import PropTypes from 'prop-types';
 import StackOverflowIcon from '../../resources/images/icons/stackoverflow.svg';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
@@ -12,13 +12,16 @@ import withStyles from '@material-ui/core/styles/withStyles';
     display: 'flex',
     justifyContent: 'center',
     background: `linear-gradient(${theme.palette.primary.main}, ${theme.palette.secondary.light}, ${theme.palette.primary.light})`,
+    [theme.breakpoints.down('xs')]: {
+      background: `linear-gradient(${theme.palette.secondary.light}, ${theme.palette.primary.light})`,
+    },
   },
   content: {
     flex: 1,
     display: 'flex',
     maxWidth: theme.body.maxWidth,
     [theme.breakpoints.down('xs')]: {
-      flexDirection: 'column',
+      flexDirection: 'column-reverse',
     },
   },
   leftContent: {
@@ -75,13 +78,13 @@ class Header extends Component {
           <div className={classes.leftContent}>
             <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
             <span className={classes.socialIcons}>
-              <a href="//www.github.com/kevhender">
+              <a href="//github.com/kevhender">
                 <GithubIcon className={classes.socialIcon} />
               </a>
               <a href="//stackoverflow.com/users/2072693/kevhender">
                 <StackOverflowIcon className={classes.socialIcon} />
               </a>
-              <a href="//www.linkedin.com/in/kevhender">
+              <a href="//linkedin.com/in/kevhender">
                 <LinkedInIcon className={classes.socialIcon} />
               </a>
             </span>

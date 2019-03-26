@@ -2,6 +2,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const { sendEmail } = require('./src/contact/sendEmail');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -11,6 +12,8 @@ const webpackConfig = require('./webpack.production.config.js');
 const app = express();
 
 const compiler = webpack(webpackConfig);
+
+app.use(compression());
 
 app.use(webpackDevMiddleware(compiler, {
   filename: 'bundle.js',

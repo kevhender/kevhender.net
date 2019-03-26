@@ -1,8 +1,10 @@
-import { LinearProgress, Typography, withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import { PropTypes as MobxPropTypes } from 'mobx-react';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 import { fade } from '@material-ui/core/styles/colorManipulator';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
   root: {

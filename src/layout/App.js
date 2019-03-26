@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import PropTypes from 'prop-types';
 import SkillShowcase from '../skills/SkillShowcase';
 import Timeline from '../timeline/Timeline';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import VisibilitySensor from 'react-visibility-sensor';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import withStyles from '@material-ui/core/styles/withStyles';
