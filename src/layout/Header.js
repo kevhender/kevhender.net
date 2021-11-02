@@ -94,7 +94,7 @@ class Header extends Component {
               Kevin Henderson
             </Typography>
             <Typography variant="h5">
-              JavaScript development &amp; consulting
+              Senior UX Engineer
             </Typography>
           </div>
         </div>

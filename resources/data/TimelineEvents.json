@@ -1,30 +1,49 @@
 [
   {
-    "name": "Moovweb",
+    "name": "Limelight / Moovweb",
     "type": "employment",
     "dates": {
       "from": "11/2015"
     },
     "location": "San Francisco, CA (telecommuting from Charlotte, NC)",
-    "logo": "moovweb.svg",
+    "logo": "llnw.png",
     "phone": "",
     "position": "Senior Platform Engineer",
-    "overview": "Platform developer for Moovweb's React Storefront PWA framework. Formerly lead developer on MoovCheckout, a React-based application that builds an injectable snippet to transform a mobile checkout flow, in order to achieve maximize conversion rate.",
+    "overview": "Platform developer for Layer0 framework and platform console. Formerly lead developer on MoovCheckout, a React-based application that builds an injectable snippet to transform a mobile checkout flow, in order to achieve maximize conversion rate.",
     "accomplishments": [
+      "Heavily involved in day-to-day development of Layer0 Console app, which has a Ruby on Rails backend with React frontend using MaterialUI. The frontend connects to the RoR app using GraphQL and Apollo.",
+      "Implemented UX for site metrics analytics portion using ChartJS.",
+      "Used MaterialUI's responsive features to make the entire app mobile-friendly.",
+      "Implemented application support form by integrating app front and backends with Intercom API, PagerDuty API, Google ReCAPTCHA, and Amazon S3 API",
+
+      "Helped design and bootstrap Layer0 framework docs application as a NextJS app running on Layer0 platform",
+      "Assisted in creating and maintaining integral parts of Layer0 framework",
+      "Helped integrate Layer0 support for multiple frameworks, including Next, Vue, Nuxt, Angular, and Spartacus",
+      "Enhanced service worker functionality to improve prefetching capabilities",
+
+      "Key contributor to the React Storefront framework, an open-source eCommerce PWA framework started by Moovweb to provide site builders a lightning-fast way to create their web applications",
+      "Created and maintained reusable components for storefront shopping apps",
+      "Maintained 100% test coverage on framework components using Jest",
+      "Helped Professional Services team bootstrap and develop client applications with the framework",
+
       "Worked on both core framework functionality and individual customer site implementations.",
       "Assisted in initial application bootstrapping, helping to set up independent Node package structure for intuitive application build and deployment.",
       "Helped build and maintain dev server environment using man-in-the-middle proxy on an Express server, to allow application to be injected onto a production environment for full usability during the development cycle."
     ],
     "skills": [
+      { "id": "react" },
       { "id": "es6" },
-      { "id": "promises" },
-      { "id": "async" },
-      { "id": "lodash" },
-      { "id": "mocha" },
+      { "id": "typescript" },
       { "id": "node" },
-      { "id": "mobx" },
+      { "id": "next" },
+      { "id": "lodash" },
+      { "id": "workbox" },
       { "id": "materialui" },
-      { "id": "webpack" }
+      { "id": "webpack" },
+      { "id": "postgres" },
+      { "id": "githubactions" },
+      { "id": "jest" },
+      { "id": "tdd" }
     ]
   },
   {
@@ -106,6 +125,7 @@
       { "id": "sass" },
       { "id": "java" },
       { "id": "ant" },
+      { "id": "postgres" },
       { "id": "hibernate" },
       { "id": "spring" },
       { "id": "springsec" },
