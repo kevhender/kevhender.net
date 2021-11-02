@@ -57,6 +57,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   },
   myName: {
     ...theme.typography.h3,
+    fontSize: '3rem',
     marginBottom: theme.spacing(1),
     fontWeight: 'bold',
   },

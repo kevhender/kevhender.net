@@ -24,7 +24,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
     ...theme.typography.h6,
     color: theme.palette.primary.main,
     flex: '0 0 120px',
-    marginRight: theme.spacing(2),
+    marginRight: `${theme.spacing(2)} !important`,
     textAlign: 'right',
     [theme.breakpoints.down('sm')]: {
       flex: '0',
@@ -43,8 +43,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   },
   progressBar: {
     backgroundColor: fade(theme.palette.secondary.main, 0.7),
-    margin: '2px',
-    width: 'calc(100% - 4px)',
+    margin: theme.spacing(0.375, 0),
   },
 }))
 class SkillDisplay extends Component {
