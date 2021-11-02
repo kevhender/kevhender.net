@@ -78,13 +78,13 @@ class Header extends Component {
           <div className={classes.leftContent}>
             <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
             <span className={classes.socialIcons}>
-              <a href="//github.com/kevhender">
+              <a href="//github.com/kevhender" target="_blank" rel="noopener noreferrer">
                 <GithubIcon className={classes.socialIcon} />
               </a>
-              <a href="//stackoverflow.com/users/2072693/kevhender">
+              <a href="//stackoverflow.com/users/2072693/kevhender" target="_blank" rel="noopener noreferrer">
                 <StackOverflowIcon className={classes.socialIcon} />
               </a>
-              <a href="//linkedin.com/in/kevhender">
+              <a href="//linkedin.com/in/kevhender" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon className={classes.socialIcon} />
               </a>
             </span>
