@@ -56,7 +56,7 @@ const asTimelineContent = (stylesFn = () => ({})) => WrappedComponent => {
       display: 'flex',
       alignItems: 'center',
       fontStyle: 'italic',
-      marginBottom: theme.spacing.unit * 2,
+      marginBottom: theme.spacing(2),
     },
     calendar: {
       color: theme.palette.primary.main,

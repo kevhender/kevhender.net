@@ -52,12 +52,12 @@ import withStyles from '@material-ui/core/styles/withStyles';
     verticalAlign: 'middle',
     [theme.breakpoints.down('xs')]: {
       display: 'block',
-      margin: `${theme.spacing.unit * 4}px ${theme.spacing.unit * 2}px`,
+      margin: theme.spacing(1, 2),
     },
   },
   myName: {
     ...theme.typography.h3,
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing(1),
     fontWeight: 'bold',
   },
 }))

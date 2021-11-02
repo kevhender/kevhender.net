@@ -9,9 +9,9 @@ import withStyles from '@material-ui/core/styles/withStyles';
 @withStyles(theme => ({
   root: {
     display: 'flex',
-    margin: `${theme.spacing.unit}px 0`,
+    margin: theme.spacing(1, 0),
     alignItems: 'center',
-    flex: `0 0 calc(50% - ${theme.spacing.unit * 2}px)`,
+    flex: `0 0 calc(50% - ${theme.spacing(2)}px)`,
     [theme.breakpoints.down('xs')]: {
       flex: '0 0 100%',
     },
@@ -23,8 +23,8 @@ import withStyles from '@material-ui/core/styles/withStyles';
   skillName: {
     ...theme.typography.h6,
     color: theme.palette.primary.main,
-    flex: '0 0 100px',
-    marginRight: theme.spacing.unit * 2,
+    flex: '0 0 120px',
+    marginRight: theme.spacing(2),
     textAlign: 'right',
     [theme.breakpoints.down('sm')]: {
       flex: '0',
@@ -32,13 +32,13 @@ import withStyles from '@material-ui/core/styles/withStyles';
     },
   },
   progressRoot: {
-    height: `calc(${theme.spacing.unit * 2}px + 6px)`,
+    height: `calc(${theme.spacing(2)}px + 6px)`,
     borderRadius: '3px',
     backgroundColor: fade(theme.palette.secondary.light, 0.5),
     boxShadow: `0 0 2px 2px ${theme.palette.primary.main}`,
     flex: '1 0 300px',
     [theme.breakpoints.down('sm')]: {
-      flex: `0 0 calc(${theme.spacing.unit * 2}px + 6px)`,
+      flex: `0 0 calc(${theme.spacing(2)}px + 6px)`,
     },
   },
   progressBar: {

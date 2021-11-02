@@ -1,4 +1,4 @@
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const MAROON = '#8b4b5b';
 const ORANGE = '#f08c3c';

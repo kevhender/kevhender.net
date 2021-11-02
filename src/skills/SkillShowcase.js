@@ -12,7 +12,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 @withStyles(theme => ({
   root: {
     display: 'block',
-    padding: `0 ${theme.spacing.unit * 2}px`,
+    padding: theme.spacing(0, 2),
   },
   categoryHeader: {
     'maxWidth': theme.body.maxWidth,

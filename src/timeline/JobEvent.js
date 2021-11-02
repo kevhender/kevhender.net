@@ -20,12 +20,15 @@ import isEmpty from 'lodash/isEmpty';
   accomplishmentText: {
     ...theme.typography.body2,
   },
+  listIcon: {
+    minWidth: 0,
+  },
   skillsContainer: {
     display: 'flex',
     flexWrap: 'wrap',
   },
   skillRoot: {
-    padding: `0 ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit}px`,
+    padding: theme.spacing(0, 2, 0, 1),
     flex: '0 0 50%',
     flexDirection: 'column',
     alignItems: 'inherit',
@@ -36,7 +39,7 @@ import isEmpty from 'lodash/isEmpty';
     textAlign: 'left',
   },
   skillProgressRoot: {
-    flex: `0 0 ${theme.spacing.unit * 2}px`,
+    flex: `0 0 ${theme.spacing(2)}px`,
   },
 }))
 class JobEvent extends Component {
@@ -62,7 +65,7 @@ class JobEvent extends Component {
             disableGutters
             key={accomplishment}
           >
-            <ListItemIcon>
+            <ListItemIcon className={classes.listIcon}>
               <ArrowRightIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.accomplishmentText }}>{accomplishment}</ListItemText>

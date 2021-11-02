@@ -24,13 +24,13 @@ import withStyles from '@material-ui/core/styles/withStyles';
   sectionHeader: {
     ...theme.typography.h4,
     fontWeight: 'bold',
-    margin: `${theme.spacing.unit * 7}px 0 ${theme.spacing.unit * 3}px 0`,
-    padding: theme.spacing.unit,
+    margin: theme.spacing(7, 0, 3, 0),
+    padding: theme.spacing(1),
     background: `linear-gradient(${fade(theme.palette.primary.light, 0.3)}, ${fade(theme.palette.secondary.light, 0.3)})`,
     borderBottom: `5px solid ${theme.palette.primary.main}`,
   },
   bottomSpacer: {
-    height: theme.spacing.unit * 10,
+    height: theme.spacing(10),
   },
 }))
 class Root extends Component {

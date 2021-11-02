@@ -8,9 +8,9 @@ import withStyles from '@material-ui/core/styles/withStyles';
     width: '100%',
     background: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
     textAlign: 'center',
-    padding: theme.spacing.unit,
+    padding: theme.spacing(1),
     fontSize: '.8rem',
   },
 }))

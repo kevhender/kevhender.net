@@ -17,7 +17,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   root: {
     display: 'flex',
     flexDirection: 'column',
-    padding: `0 ${theme.spacing.unit * 2}px`,
+    padding: theme.spacing(0, 2),
   },
   nameField: {
     maxWidth: '400px',
@@ -30,16 +30,16 @@ import withStyles from '@material-ui/core/styles/withStyles';
   },
   sendButton: {
     width: '250px',
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
   },
   rightIcon: {
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
   },
   preformattedError: {
     whiteSpace: 'unset',
     border: '1px solid #999',
     backgroundColor: '#eee',
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
   },
 }))
 class ContactForm extends Component {
