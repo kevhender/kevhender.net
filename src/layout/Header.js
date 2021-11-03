@@ -59,7 +59,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
     ...theme.typography.h3,
     fontSize: '3rem !important',
     marginBottom: theme.spacing(1),
-    fontWeight: 'bold',
+    fontWeight: 'bold !important',
   },
 }))
 class Header extends Component {
