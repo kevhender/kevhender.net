@@ -151,7 +151,7 @@ class TimelineChrono extends Component {
 
   renderRange(monthRange) {
     return (
-      <Fragment>
+      <>
         {
           monthRange.map(time => {
             if (time.spacer) {
@@ -163,7 +163,7 @@ class TimelineChrono extends Component {
             return this.renderSpacer(time.month, time.year);
           })
         }
-      </Fragment>
+      </>
     );
   }
 

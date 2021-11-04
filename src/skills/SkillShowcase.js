@@ -1,12 +1,11 @@
+import {
+  Accordion, AccordionDetails, AccordionSummary, Typography,
+} from '@material-ui/core';
 import { PropTypes as MobxPropTypes, inject } from 'mobx-react';
 import React, { Component } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import PropTypes from 'prop-types';
 import SkillDisplay from './SkillDisplay';
-import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 @withStyles(theme => ({
@@ -56,28 +55,28 @@ class SkillShowcase extends Component {
           sortedSkillCategories.map(skillCategory => {
             const sortedSkills = app.getSortedSkills(skillCategory);
             return (
-              <ExpansionPanel
+              <Accordion
                 key={skillCategory}
                 className={classes.category}
                 defaultExpanded={skillCategory.relevance >= 0.6}
               >
-                <ExpansionPanelSummary
+                <AccordionSummary
                   className={classes.categoryHeader}
                   expandIcon={<ExpandMoreIcon />}
                 >
                   <Typography className={classes.categoryName}>
                     {skillCategory.name}
                   </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.categoryContent}>
+                </AccordionSummary>
+                <AccordionDetails className={classes.categoryContent}>
                   {sortedSkills.map(skill => (
                     <SkillDisplay
                       key={skill}
                       skill={skill}
                     />
                   ))}
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+                </AccordionDetails>
+              </Accordion>
             );
           })
         }

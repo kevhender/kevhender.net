@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import { Typography, makeStyles } from '@material-ui/core';
 import GithubIcon from '../../resources/images/icons/github.svg';
 import LinkedInIcon from '../../resources/images/icons/linkedin.svg';
-import PropTypes from 'prop-types';
+import React from 'react';
 import StackOverflowIcon from '../../resources/images/icons/stackoverflow.svg';
-import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/core/styles/withStyles';
 
-@withStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     display: 'flex',
@@ -61,47 +59,39 @@ import withStyles from '@material-ui/core/styles/withStyles';
     marginBottom: theme.spacing(1),
     fontWeight: 'bold !important',
   },
-}))
-class Header extends Component {
-  static propTypes = {
-    classes: PropTypes.objectOf(PropTypes.string),
-  };
+}));
 
-  static defaultProps = {
-    classes: {},
-  };
+function Header() {
+  const classes = useStyles();
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.content}>
-          <div className={classes.leftContent}>
-            <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
-            <span className={classes.socialIcons}>
-              <a href="//github.com/kevhender" target="_blank" rel="noopener noreferrer">
-                <GithubIcon className={classes.socialIcon} />
-              </a>
-              <a href="//stackoverflow.com/users/2072693/kevhender" target="_blank" rel="noopener noreferrer">
-                <StackOverflowIcon className={classes.socialIcon} />
-              </a>
-              <a href="//linkedin.com/in/kevhender" target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon className={classes.socialIcon} />
-              </a>
-            </span>
-          </div>
-          <div className={classes.rightContent}>
-            <Typography className={classes.myName}>
-              Kevin Henderson
-            </Typography>
-            <Typography variant="h5">
-              Senior UX Engineer
-            </Typography>
-          </div>
+  return (
+    <div className={classes.root}>
+      <div className={classes.content}>
+        <div className={classes.leftContent}>
+          <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
+          <span className={classes.socialIcons}>
+            <a href="//github.com/kevhender" target="_blank" rel="noopener noreferrer">
+              <GithubIcon className={classes.socialIcon} />
+            </a>
+            <a href="//stackoverflow.com/users/2072693/kevhender" target="_blank" rel="noopener noreferrer">
+              <StackOverflowIcon className={classes.socialIcon} />
+            </a>
+            <a href="//linkedin.com/in/kevhender" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon className={classes.socialIcon} />
+            </a>
+          </span>
+        </div>
+        <div className={classes.rightContent}>
+          <Typography className={classes.myName}>
+            Kevin Henderson
+          </Typography>
+          <Typography variant="h5">
+            Senior UX Engineer
+          </Typography>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Header;

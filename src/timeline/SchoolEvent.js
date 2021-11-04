@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { PropTypes as MobxPropTypes } from 'mobx-react';
 import PropTypes from 'prop-types';
 import SchoolIcon from '@material-ui/icons/School';
-import Typography from '@material-ui/core/Typography';
+import { Typography } from '@material-ui/core';
 import arrayToEnglish from '../util/arrayToEnglish';
 import asTimelineContent from './asTimelineContent';
 import moment from 'moment';
@@ -39,7 +39,7 @@ class SchoolEvent extends Component {
       );
     }
     return (
-      <Fragment>
+      <>
         <Typography variant="body2">
           <span className={classes.italic}>
             {`Major${pluralMajors ? 's' : ''}: `}
@@ -54,18 +54,18 @@ class SchoolEvent extends Component {
             {arrayToEnglish(minors, makeBold)}
           </Typography>
         ) : null}
-      </Fragment>
+      </>
     );
   }
 
   render() {
     const { event } = this.props;
     return (
-      <Fragment>
+      <>
         {this.renderHeader(event.name, event.position, SchoolIcon)}
         {this.renderMainContent(this.renderOverview())}
         {this.renderFooter()}
-      </Fragment>
+      </>
     );
   }
 }

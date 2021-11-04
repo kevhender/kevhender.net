@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
 import GithubIcon from '../../resources/images/icons/github.svg';
 import LinkedInIcon from '../../resources/images/icons/linkedin.svg';
 import PropTypes from 'prop-types';
+import React from 'react';
 import StackOverflowIcon from '../../resources/images/icons/stackoverflow.svg';
 import classnames from 'classnames';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const AVATAR_HEIGHT = 40;
 
-@withStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     position: 'fixed',
     top: 0,
@@ -91,55 +91,52 @@ const AVATAR_HEIGHT = 40;
     height: theme.spacing(1),
     backgroundImage: `linear-gradient(${theme.palette.background.default}, transparent)`,
   },
-}))
-class NavBar extends Component {
-  static propTypes = {
-    classes: PropTypes.objectOf(PropTypes.string),
-    visible: PropTypes.bool.isRequired,
-    selected: PropTypes.string,
-  };
+}));
 
-  static defaultProps = {
-    classes: {},
-    selected: null,
-  };
-
-  render() {
-    const { classes, visible, selected } = this.props;
-    return (
-      <header className={classnames(classes.root, { [classes.rootHidden]: !visible })}>
-        <div className={classes.navBar}>
-          <div className={classes.navContent}>
-            <a className={classnames(classes.navLink, classes.homeLink)} href="/#">
-              <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
-              <span className={classes.homeLinkText}>Kevin Henderson</span>
+function NavBar({ visible, selected }) {
+  const classes = useStyles();
+  return (
+    <header className={classnames(classes.root, { [classes.rootHidden]: !visible })}>
+      <div className={classes.navBar}>
+        <div className={classes.navContent}>
+          <a className={classnames(classes.navLink, classes.homeLink)} href="/#">
+            <img className={classes.avatar} src="images/kevinFace.png" alt="Kevin Henderson" />
+            <span className={classes.homeLinkText}>Kevin Henderson</span>
+          </a>
+          <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'skills' })}>
+            <a className={classes.navLink} href="#skills">Skills</a>
+          </span>
+          <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'timeline' })}>
+            <a className={classes.navLink} href="#timeline">Timeline</a>
+          </span>
+          <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'contact' })}>
+            <a className={classes.navLink} href="#contact">Contact</a>
+          </span>
+          <span>
+            <a href="//www.github.com/kevhender">
+              <GithubIcon className={classes.socialIcon} />
             </a>
-            <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'skills' })}>
-              <a className={classes.navLink} href="#skills">Skills</a>
-            </span>
-            <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'timeline' })}>
-              <a className={classes.navLink} href="#timeline">Timeline</a>
-            </span>
-            <span className={classnames(classes.navLinkWrap, { [classes.navLinkWrapActive]: selected === 'contact' })}>
-              <a className={classes.navLink} href="#contact">Contact</a>
-            </span>
-            <span>
-              <a href="//www.github.com/kevhender">
-                <GithubIcon className={classes.socialIcon} />
-              </a>
-              <a href="//stackoverflow.com/users/2072693/kevhender">
-                <StackOverflowIcon className={classes.socialIcon} />
-              </a>
-              <a href="//www.linkedin.com/in/kevhender">
-                <LinkedInIcon className={classes.socialIcon} />
-              </a>
-            </span>
-          </div>
+            <a href="//stackoverflow.com/users/2072693/kevhender">
+              <StackOverflowIcon className={classes.socialIcon} />
+            </a>
+            <a href="//www.linkedin.com/in/kevhender">
+              <LinkedInIcon className={classes.socialIcon} />
+            </a>
+          </span>
         </div>
-        <div className={classes.spacer} />
-      </header>
-    );
-  }
+      </div>
+      <div className={classes.spacer} />
+    </header>
+  );
 }
+
+NavBar.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  selected: PropTypes.string,
+};
+
+NavBar.defaultProps = {
+  selected: null,
+};
 
 export default NavBar;

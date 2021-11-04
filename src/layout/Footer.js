@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { makeStyles } from '@material-ui/core/styles';
 
-@withStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     background: theme.palette.primary.main,
@@ -13,25 +12,16 @@ import withStyles from '@material-ui/core/styles/withStyles';
     padding: theme.spacing(1),
     fontSize: '.8rem',
   },
-}))
-class Footer extends Component {
-  static propTypes = {
-    classes: PropTypes.objectOf(PropTypes.string),
-  };
+}));
 
-  static defaultProps = {
-    classes: {},
-  };
-
-  render() {
-    const { classes } = this.props;
-    return (
-      <Typography variant="body2" className={classes.root}>
-        &copy;
-        {`${new Date().getFullYear()} Kevin Henderson`}
-      </Typography>
-    );
-  }
+function Footer() {
+  const classes = useStyles();
+  return (
+    <Typography variant="body2" className={classes.root}>
+      &copy;
+      {`${new Date().getFullYear()} Kevin Henderson`}
+    </Typography>
+  );
 }
 
 export default Footer;

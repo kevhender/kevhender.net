@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/.sencha" />
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/build" />
       <excludeFolder url="file://$MODULE_DIR$/archive/sencha/resources" />
+      <excludeFolder url="file://$MODULE_DIR$/www" />
     </content>
     <content url="file://$MODULE_DIR$/www" />
     <orderEntry type="sourceFolder" forTests="false" />

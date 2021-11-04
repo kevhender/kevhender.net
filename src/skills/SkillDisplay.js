@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import { alpha, makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { PropTypes as MobxPropTypes } from 'mobx-react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { fade } from '@material-ui/core/styles/colorManipulator';
-import withStyles from '@material-ui/core/styles/withStyles';
 
-@withStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     margin: theme.spacing(1, 0),
@@ -34,7 +33,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
   progressRoot: {
     height: `calc(${theme.spacing(2)}px + 6px)`,
     borderRadius: '3px',
-    backgroundColor: fade(theme.palette.secondary.light, 0.5),
+    backgroundColor: alpha(theme.palette.secondary.light, 0.5),
     boxShadow: `0 0 2px 2px ${theme.palette.primary.main}`,
     flex: '1 0 300px',
     [theme.breakpoints.down('sm')]: {
@@ -42,39 +41,33 @@ import withStyles from '@material-ui/core/styles/withStyles';
     },
   },
   progressBar: {
-    backgroundColor: fade(theme.palette.secondary.main, 0.7),
+    backgroundColor: alpha(theme.palette.secondary.main, 0.7),
     margin: theme.spacing(0.375, 0),
   },
-}))
-class SkillDisplay extends Component {
-  static propTypes = {
-    classes: PropTypes.objectOf(PropTypes.string),
-    skill: PropTypes.oneOfType([PropTypes.object, MobxPropTypes.observableObject]).isRequired,
-  };
+}));
 
-  static defaultProps = {
-    classes: {},
-  };
-
-  render() {
-    const { classes, skill } = this.props;
-    return (
-      <div className={classes.root}>
-        <Typography className={classes.skillName}>
-          {skill.name}
-        </Typography>
-        <LinearProgress
-          variant="determinate"
-          color="secondary"
-          value={skill.competence * 100}
-          classes={{
-            root: classes.progressRoot,
-            bar: classes.progressBar,
-          }}
-        />
-      </div>
-    );
-  }
+function SkillDisplay({ skill }) {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <Typography className={classes.skillName}>
+        {skill.name}
+      </Typography>
+      <LinearProgress
+        variant="determinate"
+        color="secondary"
+        value={skill.competence * 100}
+        classes={{
+          root: classes.progressRoot,
+          bar: classes.progressBar,
+        }}
+      />
+    </div>
+  );
 }
+
+SkillDisplay.propTypes = {
+  skill: PropTypes.oneOfType([PropTypes.object, MobxPropTypes.observableObject]).isRequired,
+};
 
 export default SkillDisplay;

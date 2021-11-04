@@ -1,6 +1,6 @@
 import { PropTypes as MobxPropTypes, inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
-import Card from '@material-ui/core/es/Card/Card';
+import { Card } from '@material-ui/core';
 import JobEvent from './JobEvent';
 import PropTypes from 'prop-types';
 import SchoolEvent from './SchoolEvent';
@@ -65,13 +65,13 @@ class TimelineEvent extends Component {
     classes: {},
   };
 
+  onSelectEvent = event => {
+    this.props.app.selectTimelineEvent(event);
+  };
+
   static eventClassMap = {
     employment: JobEvent,
     school: SchoolEvent,
-  };
-
-  onSelectEvent = event => {
-    this.props.app.selectTimelineEvent(event);
   };
 
   render() {
