@@ -1,9 +1,46 @@
 [
   {
+    "name": "ZenGRC / RiskOptics / Reciprocity",
+    "type": "employment",
+    "dates": {
+        "from": "1/2022",
+        "to": "9/2024"
+    },
+    "location": "Telecommuting from Charlotte, NC",
+    "logo": "zengrc.png",
+    "phone": "",
+    "position": "Senior Staff Engineer",
+    "overview": "Began as a senior developer on a revamp of an existing application, but after a few months, was selected to architect and build from scratch the next generation of the ZenGRC platform, called ZenGRC Pro.",
+    "accomplishments": [
+        "Created new app from scratch using NextJS 13, MaterialUI, Postgres, and Postgraphile",
+        "Was tasked with bootstrapping the next gen product, in consultation with the company’s chief architect. Initially got the app off the ground, before having the rest of the team of engineers switch to using the new app",
+        "Implemented with NextJS “pages” router, since “app” router was still in its infancy and was not quite ready to handle an app of this scale. Memory leaks were rampant, so the “pages” router was utilized to take advantage of its maturity level. A system was devised to allow us to more easily switch to the “app” router, once it was more stable",
+        "Used MaterialUI 5 for the front end",
+        "Started with a minimal Postgres database, and used Postgraphile with GraphQL and react-query to connect. Implemented codegen for strong typing with Typescript, and created reusable hooks to generate query and mutation hooks for GraphQL operations",
+        "Eventually worked with a team of about 10 engineers, building the app from its infancy to a full production app. I remained the principal developer on the app, reviewing all PRs and designs, and having a hand in all major decisions",
+        "With no designers remaining in the company, I redesigned the app’s theme and UX. I used MaterialUI’s theming to allow for light and dark modes, and to update Card layouts throughout the app",
+        "Recently began designing a new external app for company Trust Centers, using NextJS 15 and MUI 6, utilizing the app router and server components"
+    ],
+    "skills": [
+        { "id": "react" },
+        { "id": "es6" },
+        { "id": "typescript" },
+        { "id": "node" },
+        { "id": "next" },
+        { "id": "lodash" },
+        { "id": "materialui" },
+        { "id": "postgres" },
+        { "id": "githubactions" },
+        { "id": "jest" },
+        { "id": "tdd" }
+    ]
+},
+  {
     "name": "Limelight / Moovweb",
     "type": "employment",
     "dates": {
-      "from": "11/2015"
+      "from": "11/2015",
+      "to": "1/2022"
     },
     "location": "San Francisco, CA (telecommuting from Charlotte, NC)",
     "logo": "llnw.png",
