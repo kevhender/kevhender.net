@@ -51,6 +51,13 @@
       "relevance": 1
     },
     {
+      "id": "aws",
+      "name": "AWS",
+      "categoryId": "frontend",
+      "competence": 0.9,
+      "relevance": 1
+    },
+    {
       "id": "extjs",
       "name": "ExtJS",
       "categoryId": "frontend",
