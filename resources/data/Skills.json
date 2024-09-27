@@ -23,17 +23,10 @@
   ],
   "skills": [
     {
-      "id": "es6",
-      "name": "ES6",
-      "categoryId": "frontend",
-      "competence": 1,
-      "relevance": 1
-    },
-    {
       "id": "typescript",
       "name": "TypeScript",
       "categoryId": "frontend",
-      "competence": 0.9,
+      "competence": 1,
       "relevance": 1
     },
     {
@@ -51,32 +44,11 @@
       "relevance": 1
     },
     {
-      "id": "workbox",
-      "name": "Workbox",
-      "categoryId": "frontend",
-      "competence": 0.9,
-      "relevance": 0.9
-    },
-    {
       "id": "node",
       "name": "Node.js",
       "categoryId": "frontend",
-      "competence": 0.9,
+      "competence": 1,
       "relevance": 1
-    },
-    {
-      "id": "mobx",
-      "name": "MobX",
-      "categoryId": "frontend",
-      "competence": 0.9,
-      "relevance": 0.8
-    },
-    {
-      "id": "redux",
-      "name": "Redux",
-      "categoryId": "frontend",
-      "competence": 0.55,
-      "relevance": 0.8
     },
     {
       "id": "extjs",
@@ -93,13 +65,6 @@
       "relevance": 1
     },
     {
-      "id": "async",
-      "name": "async / await / Promises",
-      "categoryId": "frontend",
-      "competence": 1,
-      "relevance": 1
-    },
-    {
       "id": "eslint",
       "name": "ESLint",
       "categoryId": "frontend",
@@ -109,76 +74,6 @@
     {
       "id": "materialui",
       "name": "MaterialUI",
-      "categoryId": "frontend",
-      "competence": 1,
-      "relevance": 1
-    },
-    {
-      "id": "jest",
-      "name": "Jest",
-      "categoryId": "frontend",
-      "competence": 0.8,
-      "relevance": 1
-    },
-    {
-      "id": "mocha",
-      "name": "Mocha / Chai",
-      "categoryId": "frontend",
-      "competence": 0.7,
-      "relevance": 0.6
-    },
-    {
-      "id": "webpack",
-      "name": "Webpack",
-      "categoryId": "frontend",
-      "competence": 0.8,
-      "relevance": 0.9
-    },
-    {
-      "id": "siesta",
-      "name": "Siesta",
-      "categoryId": "frontend",
-      "competence": 0.7,
-      "relevance": 0.2
-    },
-    {
-      "id": "angular",
-      "name": "AngularJS",
-      "categoryId": "frontend",
-      "competence": 0.5,
-      "relevance": 0.5
-    },
-    {
-      "id": "jquery",
-      "name": "jQuery",
-      "categoryId": "frontend",
-      "competence": 0.6,
-      "relevance": 0.6
-    },
-    {
-      "id": "jss",
-      "name": "JSS",
-      "categoryId": "frontend",
-      "competence": 0.9,
-      "relevance": 0.9
-    },
-    {
-      "id": "sass",
-      "name": "SASS",
-      "categoryId": "frontend",
-      "competence": 0.9,
-      "relevance": 0.9
-    },
-    {
-      "id": "less",
-      "name": "LESS",
-      "categoryId": "frontend",
-      "competence": 0.7,
-      "relevance": 0.7
-    },
-    {
-      "id": "html5",
-      "name": "HTML 5",
       "categoryId": "frontend",
       "competence": 1,
       "relevance": 1
